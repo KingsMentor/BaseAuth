@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "791055103226",
+    "firebase_url": "https://baseauthsample.firebaseio.com",
+    "project_id": "baseauthsample",
+    "storage_bucket": "baseauthsample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791055103226:android:90e2c591bd41bd53",
+        "android_client_info": {
+          "package_name": "xyz.belvi.baseauthsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791055103226-3cteje7snt0jtrvsdjtd0figc2tb522b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "xyz.belvi.baseauthsample",
+            "certificate_hash": "720c20256497349565f659b8b33a826dd03165b6"
+          }
+        },
+        {
+          "client_id": "791055103226-pta9rou6sds90lga31cabndt9m4kqs51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbwAZ9yhOeRIOLJqm8InqELsDj3QDy-a8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791055103226-pta9rou6sds90lga31cabndt9m4kqs51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

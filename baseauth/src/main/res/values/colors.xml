@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#42a5f5</color>
+    <color name="colorPrimaryDark">#253493</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="duo_blue">#42a5f5</color>
+    <color name="white">#efefef</color>
+    <color name="faint">#efefef</color>
+</resources>

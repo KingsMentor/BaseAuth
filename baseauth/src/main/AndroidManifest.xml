@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.belvi.baseauth">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application>
+
+        <activity
+            android:name=".auth.AuthActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+
+            android:name=".adapters.CCSelector"
+            android:label="@string/select_country"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

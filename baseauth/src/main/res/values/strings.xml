@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BaseAuth</string>
+    <string name="help">Help</string>
+    <string name="select_country">Select your country</string>
+    <string name="type_in">Please type in the verification code sent to %s</string>
+</resources>
