@@ -8,8 +8,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.PhoneAuthCredential;
 
-import xyz.belvi.baseauth.AuthListeners;
-import xyz.belvi.baseauth.auth.AuthActivity;
+import xyz.belvi.baseauth.callbacks.AuthListeners;
+import xyz.belvi.baseauth.auth.base.AuthActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +18,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AuthActivity.startFirebasePhoneAuth(this, new AuthListeners.FirebaseAuthListener() {
             @Override
-            public void onAuthCompleted(PhoneAuthCredential credential) {
+            public void authIgnored() {
+
+            }
+
+            @Override
+            public void onAuthCompleted(PhoneAuthCredential credential, String phoneNumber) {
                 Toast.makeText(MainActivity.this, "finished", Toast.LENGTH_LONG).show();
             }
+
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

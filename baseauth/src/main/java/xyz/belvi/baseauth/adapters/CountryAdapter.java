@@ -13,21 +13,21 @@ import xyz.belvi.baseauth.R;
  * Created by zone2 on 9/18/17.
  */
 
-abstract public class CCAdapter extends RecyclerView.Adapter<CCHolder> {
+abstract public class CountryAdapter extends RecyclerView.Adapter<CountryHolder> {
     private PhoneNumberVerifier.Countries selectedCountries;
 
-    public CCAdapter(PhoneNumberVerifier.Countries countries) {
+    public CountryAdapter(PhoneNumberVerifier.Countries countries) {
         this.selectedCountries = countries;
 
     }
 
     @Override
-    public CCHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new CCHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cc_selector_tiem, parent, false));
+    public CountryHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new CountryHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cc_selector_tiem, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(CCHolder holder, final int position) {
+    public void onBindViewHolder(CountryHolder holder, final int position) {
         holder.getCountryName().setText(PhoneNumberVerifier.Countries.values()[position].getCountryName());
         holder.getCountryCode().setText("( +" + String.valueOf(PhoneNumberVerifier.Countries.values()[position].getCountryCode()) + " )");
         if (selectedCountries == PhoneNumberVerifier.Countries.values()[position]) {

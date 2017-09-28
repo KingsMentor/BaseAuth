@@ -1,4 +1,4 @@
-package xyz.belvi.baseauth;
+package xyz.belvi.baseauth.custom;
 
 import android.text.TextPaint;
 import android.text.style.URLSpan;

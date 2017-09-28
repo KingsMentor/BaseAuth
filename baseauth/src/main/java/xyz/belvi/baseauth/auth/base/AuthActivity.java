@@ -1,4 +1,4 @@
-package xyz.belvi.baseauth.auth;
+package xyz.belvi.baseauth.auth.base;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.view.Menu;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import xyz.belvi.baseauth.AuthListeners;
-import xyz.belvi.baseauth.R;
 import xyz.belvi.baseauth.auth.AuthDetailsFragment;
+import xyz.belvi.baseauth.callbacks.AuthListeners;
+import xyz.belvi.baseauth.R;
 
 /**
  * Created by zone2 on 9/18/17.
@@ -22,7 +22,7 @@ public class AuthActivity extends AppCompatActivity {
 
 
     public static void startFirebasePhoneAuth(Context context, AuthListeners.FirebaseAuthListener authListener) {
-        FirebaseAuthHandler.init(authListener);
+        AuthHandler.init(authListener);
         context.startActivity(new Intent(context, AuthActivity.class));
     }
 
@@ -34,7 +34,8 @@ public class AuthActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
-        getSupportFragmentManager().beginTransaction().replace(R.id.auth_content_frame, new AuthDetailsFragment()).commitAllowingStateLoss();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.auth_content_frame, new AuthDetailsFragment()).commitAllowingStateLoss();
 
     }
 
@@ -44,4 +45,13 @@ public class AuthActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() != 0)
+            super.onBackPressed();
+        else {
+            finish();
+            AuthHandler.getsAuthListener().authIgnored();
+        }
+    }
 }

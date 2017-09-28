@@ -14,7 +14,7 @@ import java.util.Arrays;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.R;
 
-public class CCSelector extends AppCompatActivity {
+public class CountrySelector extends AppCompatActivity {
 
     public static final String SELECTED_COUNTRY = "SELECTED_COUNTRY";
 
@@ -43,7 +43,7 @@ public class CCSelector extends AppCompatActivity {
         }
         if (countries != null)
             recyclerView.scrollToPosition(Arrays.asList(PhoneNumberVerifier.Countries.values()).indexOf(countries));
-        recyclerView.setAdapter(new CCAdapter(countries) {
+        recyclerView.setAdapter(new CountryAdapter(countries) {
             @Override
             public void onCountrySelected(PhoneNumberVerifier.Countries countries) {
                 setResult(Activity.RESULT_OK, getIntent().putExtra(SELECTED_COUNTRY, countries.name()));

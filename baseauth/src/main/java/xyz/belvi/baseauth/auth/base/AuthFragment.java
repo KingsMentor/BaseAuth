@@ -1,4 +1,4 @@
-package xyz.belvi.baseauth.auth;
+package xyz.belvi.baseauth.auth.base;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -20,7 +20,7 @@ import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
  * Created by zone2 on 9/19/17.
  */
 
-public abstract class AuthFragment extends Fragment {
+abstract class AuthFragment extends Fragment {
 
     protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber) {
         authPhone(selectedCountry, phoneNumber, null);

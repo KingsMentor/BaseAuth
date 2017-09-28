@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.telephony.TelephonyManager;
@@ -26,8 +25,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneModel;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
-import xyz.belvi.baseauth.adapters.CCSelector;
+import xyz.belvi.baseauth.adapters.CountrySelector;
 import xyz.belvi.baseauth.R;
+import xyz.belvi.baseauth.auth.base.AuthVerifyFragment;
 
 /**
  * Created by zone2 on 9/19/17.
@@ -79,7 +79,7 @@ public class AuthDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                startActivityForResult(new Intent(view.getContext(), CCSelector.class).putExtra(CCSelector.SELECTED_COUNTRY, selectedCountry == null ? null : selectedCountry.name()), R_C);
+                startActivityForResult(new Intent(view.getContext(), CountrySelector.class).putExtra(CountrySelector.SELECTED_COUNTRY, selectedCountry == null ? null : selectedCountry.name()), R_C);
 
             }
         });
@@ -106,7 +106,7 @@ public class AuthDetailsFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == R_C && resultCode == Activity.RESULT_OK) {
-            selectedCountry = PhoneNumberVerifier.Countries.valueOf(data.getStringExtra(CCSelector.SELECTED_COUNTRY));
+            selectedCountry = PhoneNumberVerifier.Countries.valueOf(data.getStringExtra(CountrySelector.SELECTED_COUNTRY));
             setCountryCodeText();
         }
     }

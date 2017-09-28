@@ -1,13 +1,13 @@
-package xyz.belvi.baseauth.auth;
+package xyz.belvi.baseauth.auth.base;
 
-import xyz.belvi.baseauth.AuthListeners;
-import xyz.belvi.baseauth.AuthListeners.FirebaseAuthListener;
+import xyz.belvi.baseauth.callbacks.AuthListeners;
+import xyz.belvi.baseauth.callbacks.AuthListeners.FirebaseAuthListener;
 
 /**
  * Created by zone2 on 9/21/17.
  */
 
-class FirebaseAuthHandler {
+class AuthHandler {
 
     private static AuthListeners.FirebaseAuthListener sAuthListener;
 
@@ -17,6 +17,6 @@ class FirebaseAuthHandler {
     }
 
     public static FirebaseAuthListener getsAuthListener() {
-        return FirebaseAuthHandler.sAuthListener;
+        return AuthHandler.sAuthListener;
     }
 }

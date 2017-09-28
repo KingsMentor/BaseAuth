@@ -6,12 +6,12 @@
     <application>
 
         <activity
-            android:name=".auth.AuthActivity"
+            android:name=".auth.base.AuthActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
 
-            android:name=".adapters.CCSelector"
+            android:name=".adapters.CountrySelector"
             android:label="@string/select_country"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

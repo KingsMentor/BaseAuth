@@ -1,4 +1,4 @@
-package xyz.belvi.baseauth.auth;
+package xyz.belvi.baseauth.auth.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,9 +23,10 @@ import android.widget.TextView;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.R;
-import xyz.belvi.baseauth.URLSpanNoUnderline;
+import xyz.belvi.baseauth.custom.URLSpanNoUnderline;
 
 /**
  * Created by zone2 on 9/19/17.
@@ -79,13 +80,12 @@ public class AuthVerifyFragment extends AuthFragment {
                             (keyCode == KeyEvent.KEYCODE_DEL)) {
                         // Perform action on key press
                         predictNext(child, ' ', finalX, viewGroup, true);
-                        return false;
                     } else if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) &&
                             (Character.isDigit((char) keyEvent.getUnicodeChar()))) {
 
                         predictNext(child, (char) keyEvent.getUnicodeChar(), finalX, viewGroup, false);
                     }
-                    return true;
+                    return false;
                 }
             });
             child.setOnTouchListener(new View.OnTouchListener() {
@@ -221,7 +221,12 @@ public class AuthVerifyFragment extends AuthFragment {
 
     @Override
     protected void completed(PhoneAuthCredential phoneAuthCredential) {
-        FirebaseAuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential);
+        PhoneNumberVerifier.Countries countries = PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY));
+        try {
+            AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, countries.ToCountryCode(countries, getArguments().getString(PHONE_KEY)));
+        } catch (PhoneFormatException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -236,6 +241,7 @@ public class AuthVerifyFragment extends AuthFragment {
                 @Override
                 public void onClick(String url) {
                     if (shouldClick) {
+                        waitField.setText("Please wait.");
                         authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), forceResendingToken);
                         statusField.setVisibility(View.GONE);
 //                        authPhone();
