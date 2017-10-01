@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_mono_bold"
-                android:text="Verify your number"
+                android:text="@string/verify_number"
                 android:textColor="@color/duo_blue"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -33,7 +33,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/roboto_mono_bold"
-                android:text="Enter your country code and phone number for verification"
+                android:text="@string/details_desc"
                 android:textColor="#696969"
                 android:textSize="16sp" />
 
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:editable="false"
                 android:fontFamily="@font/roboto_condensed_regular"
-                android:hint="Your country code"
+                android:hint="@string/cc_hint"
                 android:textColor="@color/duo_blue"
                 android:textSize="18sp" />
 
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_condensed_regular"
-                android:hint="Your phone number"
+                android:hint="@string/phone_hint"
                 android:inputType="phone"
                 android:textColor="@color/duo_blue"
                 android:textSize="18sp" />
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_condensed_regular"
-                android:text="We will send you a one-off SMS message. Carrier charges may apply."
+                android:text="@string/charges_desc"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -78,7 +78,7 @@
         android:fontFamily="@font/roboto_condensed_regular"
         android:gravity="end|center_vertical"
         android:padding="16dp"
-        android:text="Next"
+        android:text="@string/btn_next_title"
         android:textColor="@color/next_btn_selector"
         android:textSize="14sp" />
 </LinearLayout>

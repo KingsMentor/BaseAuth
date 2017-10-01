@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_mono_bold"
-                android:text="Verification Code"
+                android:text="@string/verification_code"
                 android:textColor="@color/duo_blue"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/roboto_light"
                 android:text="@string/type_in"
-                android:textColor="#696969"
+                android:textColor="@color/txt_grey"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -70,7 +70,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
                 android:text="Incorrect Verification code"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/txt_error"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -81,7 +81,8 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
-                android:text="Didn't receive  code ?"
+                android:text="@string/received_question"
+                android:textColor="@color/txt_grey"
                 android:textSize="14sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -90,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
-                android:text="Please wait"
+                android:text="@string/wait_field"
+                android:textColor="@color/txt_grey"
                 android:textSize="16sp" />
         </LinearLayout>
 

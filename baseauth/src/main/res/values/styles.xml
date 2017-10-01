@@ -24,7 +24,7 @@
         <item name="android:inputType">number</item>
         <item name="android:maxLength">1</item>
         <item name="android:cursorVisible">false</item>
-        <item name="android:textColor">@color/duo_blue</item>
+        <item name="android:textColor">@color/auth_code</item>
         <item name="android:textSize">24sp</item>
     </style>
 

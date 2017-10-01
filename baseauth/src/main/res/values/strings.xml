@@ -3,4 +3,13 @@
     <string name="help">Help</string>
     <string name="select_country">Select your country</string>
     <string name="type_in">Please type in the verification code sent to %s</string>
+    <string name="verify_number">Verify your number</string>
+    <string name="phone_hint">Your phone number</string>
+    <string name="cc_hint">Your country code</string>
+    <string name="btn_next_title">Next</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="received_question">Didn\'t receive  code ?</string>
+    <string name="wait_field">Please wait</string>
+    <string name="charges_desc">We will send you a one-off SMS message. Carrier charges may apply.</string>
+    <string name="details_desc">Enter your country code and phone number for verification</string>
 </resources>

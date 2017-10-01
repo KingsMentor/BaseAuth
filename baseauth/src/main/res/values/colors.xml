@@ -3,7 +3,12 @@
     <color name="colorPrimary">#42a5f5</color>
     <color name="colorPrimaryDark">#253493</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="txt_error">#FF4081</color>
     <color name="duo_blue">#42a5f5</color>
     <color name="white">#efefef</color>
     <color name="faint">#efefef</color>
+    <color name="txt_grey">#696969</color>
+    <color name="auth_code">#42a5f5</color>
+    <color name="cc_code_color">#787878</color>
+    <color name="cc_name_color">#000000</color>
 </resources>
