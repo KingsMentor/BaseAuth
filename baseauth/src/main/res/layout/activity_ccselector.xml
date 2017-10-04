@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/ba_colorPrimary"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
@@ -17,7 +17,7 @@
         android:id="@+id/cc_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/faint" />
+        android:background="@color/ba_btn_faint" />
 
 
 </LinearLayout>

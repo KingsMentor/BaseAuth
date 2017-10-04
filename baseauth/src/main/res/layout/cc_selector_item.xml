@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ba_cc_name_color"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/ba_cc_code_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

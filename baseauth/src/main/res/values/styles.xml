@@ -2,9 +2,9 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/ba_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/ba_colorPrimaryDark</item>
+        <item name="colorAccent">@color/ba_colorAccent</item>
         <item name="android:textColorSecondary">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="actionMenuTextColor">@color/white</item>
@@ -24,7 +24,7 @@
         <item name="android:inputType">number</item>
         <item name="android:maxLength">1</item>
         <item name="android:cursorVisible">false</item>
-        <item name="android:textColor">@color/auth_code</item>
+        <item name="android:textColor">@color/ba_auth_code</item>
         <item name="android:textSize">24sp</item>
     </style>
 

@@ -23,7 +23,7 @@ abstract public class CountryAdapter extends RecyclerView.Adapter<CountryHolder>
 
     @Override
     public CountryHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new CountryHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cc_selector_tiem, parent, false));
+        return new CountryHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cc_selector_item, parent, false));
     }
 
     @Override

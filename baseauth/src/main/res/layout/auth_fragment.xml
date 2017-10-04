@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_mono_bold"
                 android:text="@string/verify_number"
-                android:textColor="@color/duo_blue"
+                android:textColor="@color/ba_blue"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
                 android:editable="false"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:hint="@string/cc_hint"
-                android:textColor="@color/duo_blue"
+                android:textColor="@color/ba_blue"
                 android:textSize="18sp" />
 
             <android.support.v7.widget.AppCompatEditText
@@ -54,7 +54,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:hint="@string/phone_hint"
                 android:inputType="phone"
-                android:textColor="@color/duo_blue"
+                android:textColor="@color/ba_blue"
                 android:textSize="18sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -72,7 +72,7 @@
         android:id="@+id/verify_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/duo_blue"
+        android:background="@color/ba_blue"
         android:drawableRight="@drawable/arrow_right_selector"
         android:enabled="false"
         android:fontFamily="@font/roboto_condensed_regular"

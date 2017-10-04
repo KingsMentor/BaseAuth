@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_mono_bold"
                 android:text="@string/verification_code"
-                android:textColor="@color/duo_blue"
+                android:textColor="@color/ba_blue"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/roboto_light"
                 android:text="@string/type_in"
-                android:textColor="@color/txt_grey"
+                android:textColor="@color/ba_txt_grey"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -70,7 +70,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
                 android:text="Incorrect Verification code"
-                android:textColor="@color/txt_error"
+                android:textColor="@color/ba_txt_error"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -82,7 +82,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/received_question"
-                android:textColor="@color/txt_grey"
+                android:textColor="@color/ba_txt_grey"
                 android:textSize="14sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -92,7 +92,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/wait_field"
-                android:textColor="@color/txt_grey"
+                android:textColor="@color/ba_txt_grey"
                 android:textSize="16sp" />
         </LinearLayout>
 
