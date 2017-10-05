@@ -11,7 +11,7 @@
 
         <activity
 
-            android:name=".adapters.CountrySelector"
+            android:name=".countrySelector.CountrySelectorActivity"
             android:label="@string/select_country"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

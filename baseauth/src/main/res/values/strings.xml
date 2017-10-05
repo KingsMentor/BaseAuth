@@ -10,6 +10,7 @@
     <string name="verification_code">Verification Code</string>
     <string name="received_question">Didn\'t receive  code ?</string>
     <string name="wait_field">Please wait</string>
+    <string name="help_link">http://www.example.com</string>
     <string name="charges_desc">We will send you a one-off SMS message. Carrier charges may apply.</string>
     <string name="details_desc">Enter your country code and phone number for verification</string>
 </resources>

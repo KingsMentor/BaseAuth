@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ba_layout_padding">32dp</dimen>
+    <dimen name="verification_code_text_size">24sp</dimen>
+    <dimen name="details_desc">16sp</dimen>
+    <dimen name="details_margin_top">16dp</dimen>
+    <dimen name="phone_field_text_size">18sp</dimen>
+    <dimen name="next_btn_txt_size">14sp</dimen>
+    <dimen name="next_btn_padding">16dp</dimen>
+</resources>

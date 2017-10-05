@@ -37,11 +37,13 @@ public class AuthVerifyFragment extends AuthFragment {
 
     private final String PHONE_KEY = "PHONE_KEY";
     private final String COUNTRY_KEY = "COUNTRY_KEY";
+    private final String CODE_SIZE = "CODE_SIZE";
 
-    public AuthVerifyFragment startFragment(String phone, String country) {
+    public AuthVerifyFragment startFragment(String phone, String country, int codeSize) {
         Bundle bundle = new Bundle();
         bundle.putString(PHONE_KEY, phone);
         bundle.putString(COUNTRY_KEY, country);
+        bundle.putInt(CODE_SIZE, codeSize);
         setArguments(bundle);
         return this;
     }
@@ -57,11 +59,20 @@ public class AuthVerifyFragment extends AuthFragment {
         statusField = (AppCompatTextView) rootView.findViewById(R.id.incorrect_code);
         waitField.setLinksClickable(true);
         waitField.setMovementMethod(LinkMovementMethod.getInstance());
-        addEvents(((LinearLayout) rootView.findViewById(R.id.code_layour_grp)));
+        addCodeFields(getArguments().getInt(CODE_SIZE));
         ((AppCompatTextView) rootView.findViewById(R.id.phone_instruction)).setText(String.format(getString(R.string.type_in), getArguments().getString(PHONE_KEY)));
         authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY));
 
         return rootView;
+    }
+
+    private void addCodeFields(int codeSize) {
+        LinearLayout codeFieldLayout = rootView.findViewById(R.id.code_layout_grp);
+        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        for (int x = 0; x < codeSize; x++) {
+            codeFieldLayout.addView(inflater.inflate(R.layout.code_field, codeFieldLayout, false));
+        }
+        addEvents(codeFieldLayout);
     }
 
     private void addEvents(final ViewGroup viewGroup) {
@@ -164,7 +175,7 @@ public class AuthVerifyFragment extends AuthFragment {
     PhoneAuthProvider.ForceResendingToken forceResendingToken;
 
     private void manualAuth() {
-        ViewGroup viewGroup = (LinearLayout) rootView.findViewById(R.id.code_layour_grp);
+        ViewGroup viewGroup = (LinearLayout) rootView.findViewById(R.id.code_layout_grp);
         if (getCode(viewGroup).length() == 6) {
             PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, getCode(viewGroup));
             signInWithPhoneAuthCredential(credential);

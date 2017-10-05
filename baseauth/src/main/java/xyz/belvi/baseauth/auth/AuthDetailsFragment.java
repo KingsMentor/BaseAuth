@@ -25,7 +25,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneModel;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
-import xyz.belvi.baseauth.adapters.CountrySelector;
+import xyz.belvi.baseauth.callbacks.AuthListeners;
+import xyz.belvi.baseauth.countrySelector.CountrySelectorActivity;
 import xyz.belvi.baseauth.R;
 import xyz.belvi.baseauth.auth.base.AuthVerifyFragment;
 
@@ -79,7 +80,7 @@ public class AuthDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                startActivityForResult(new Intent(view.getContext(), CountrySelector.class).putExtra(CountrySelector.SELECTED_COUNTRY, selectedCountry == null ? null : selectedCountry.name()), R_C);
+                startActivityForResult(new Intent(view.getContext(), CountrySelectorActivity.class).putExtra(CountrySelectorActivity.SELECTED_COUNTRY, selectedCountry == null ? null : selectedCountry.name()), R_C);
 
             }
         });
@@ -91,7 +92,7 @@ public class AuthDetailsFragment extends Fragment {
                         .beginTransaction()
                         .addToBackStack(null)
                         .add(R.id.auth_content_frame, new AuthVerifyFragment()
-                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name()))
+                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name(), AuthListeners.AUTH_CODE_LENGTH.FIREBASE_CODE_LENGTH))
                         .commitAllowingStateLoss();
             }
         });
@@ -106,7 +107,7 @@ public class AuthDetailsFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == R_C && resultCode == Activity.RESULT_OK) {
-            selectedCountry = PhoneNumberVerifier.Countries.valueOf(data.getStringExtra(CountrySelector.SELECTED_COUNTRY));
+            selectedCountry = PhoneNumberVerifier.Countries.valueOf(data.getStringExtra(CountrySelectorActivity.SELECTED_COUNTRY));
             setCountryCodeText();
         }
     }

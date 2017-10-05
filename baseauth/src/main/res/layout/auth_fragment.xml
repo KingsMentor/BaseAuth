@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcfcfc"
+    android:background="@color/ba_background"
     android:orientation="vertical">
 
     <android.support.v4.widget.NestedScrollView
@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp">
+            android:padding="@dimen/ba_layout_padding">
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
@@ -24,18 +24,18 @@
                 android:fontFamily="@font/roboto_mono_bold"
                 android:text="@string/verify_number"
                 android:textColor="@color/ba_blue"
-                android:textSize="24sp"
+                android:textSize="@dimen/verification_code_text_size"
                 android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="@dimen/details_margin_top"
                 android:fontFamily="@font/roboto_mono_bold"
                 android:text="@string/details_desc"
-                android:textColor="#696969"
-                android:textSize="16sp" />
+                android:textColor="@color/ba_txt_grey"
+                android:textSize="@dimen/details_desc" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/country_code_selector"
@@ -45,25 +45,26 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:hint="@string/cc_hint"
                 android:textColor="@color/ba_blue"
-                android:textSize="18sp" />
+                android:textSize="@dimen/phone_field_text_size" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:hint="@string/phone_hint"
                 android:inputType="phone"
                 android:textColor="@color/ba_blue"
-                android:textSize="18sp" />
+                android:textSize="@dimen/phone_field_text_size" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/details_margin_top"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:text="@string/charges_desc"
-                android:textSize="16sp" />
+                android:textSize="@dimen/details_desc" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
@@ -77,8 +78,8 @@
         android:enabled="false"
         android:fontFamily="@font/roboto_condensed_regular"
         android:gravity="end|center_vertical"
-        android:padding="16dp"
+        android:padding="@dimen/next_btn_padding"
         android:text="@string/btn_next_title"
         android:textColor="@color/next_btn_selector"
-        android:textSize="14sp" />
+        android:textSize="@dimen/next_btn_txt_size" />
 </LinearLayout>

@@ -38,28 +38,13 @@
                 android:textSize="16sp" />
 
             <LinearLayout
-                android:id="@+id/code_layour_grp"
+                android:id="@+id/code_layout_grp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-                <android.support.v7.widget.AppCompatEditText style="@style/CodeStyle" />
-
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
 
             <android.support.v7.widget.AppCompatTextView

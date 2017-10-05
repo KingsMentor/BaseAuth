@@ -5,9 +5,9 @@
         <item name="colorPrimary">@color/ba_colorPrimary</item>
         <item name="colorPrimaryDark">@color/ba_colorPrimaryDark</item>
         <item name="colorAccent">@color/ba_colorAccent</item>
-        <item name="android:textColorSecondary">@color/white</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:textColorSecondary">@color/ba_white</item>
+        <item name="android:textColorPrimary">@color/ba_white</item>
+        <item name="actionMenuTextColor">@color/ba_white</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
@@ -15,7 +15,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="CodeStyle" parent="AppTheme">
+    <style name="CodeFieldStyle" parent="AppTheme">
         <item name="android:layout_width">42sp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
@@ -28,5 +28,9 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+
+    <style name="BaseAuthStyle">
+        <item name="ba_show_help">true</item>
+    </style>
 
 </resources>

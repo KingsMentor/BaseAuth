@@ -5,11 +5,13 @@
     <color name="ba_colorAccent">#FF4081</color>
     <color name="ba_txt_error">#FF4081</color>
     <color name="ba_blue">#42a5f5</color>
-    <color name="white">#ffffff</color>
     <color name="ba_background">#fcfcfc</color>
-    <color name="ba_btn_faint">#dfdfdf</color>
+    <color name="ba_btn_disabled">#dfdfdf</color>
+    <color name="ba_btn_enabled">#dfdfdf</color>
     <color name="ba_txt_grey">#696969</color>
     <color name="ba_auth_code">#42a5f5</color>
-    <color name="ba_cc_code_color">#787878</color>
-    <color name="ba_cc_name_color">#000000</color>
+    <color name="ba_white">#FFFFFF</color>
+    <color name="ba_country_selector_code_color">#787878</color>
+    <color name="ba_country_selector_bg_color">#FFFFFF</color>
+    <color name="ba_country_selector_name_color">#000000</color>
 </resources>
