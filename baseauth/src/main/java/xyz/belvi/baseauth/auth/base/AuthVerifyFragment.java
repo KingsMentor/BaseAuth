@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.Html;
@@ -20,24 +21,27 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthProvider;
 
-import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.R;
+import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.custom.URLSpanNoUnderline;
 
 /**
  * Created by zone2 on 9/19/17.
  */
 
-public class AuthVerifyFragment extends AuthFragment {
+public class AuthVerifyFragment extends Fragment implements AuthListeners.Auths {
 
 
     private final String PHONE_KEY = "PHONE_KEY";
     private final String COUNTRY_KEY = "COUNTRY_KEY";
     private final String CODE_SIZE = "CODE_SIZE";
+
+
+    int secCounter;
+    Runnable runnable;
+    Handler handler = new Handler();
 
     public AuthVerifyFragment startFragment(String phone, String country, int codeSize) {
         Bundle bundle = new Bundle();
@@ -51,9 +55,14 @@ public class AuthVerifyFragment extends AuthFragment {
     private AppCompatTextView waitField, statusField;
     private View rootView;
 
+    private AuthActivity getAuthActivity() {
+        return (AuthActivity) getActivity();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getAuthActivity().bindListener(this);
         rootView = inflater.inflate(R.layout.auth_verify_fragment, container, false);
         waitField = (AppCompatTextView) rootView.findViewById(R.id.wait_field);
         statusField = (AppCompatTextView) rootView.findViewById(R.id.incorrect_code);
@@ -61,7 +70,8 @@ public class AuthVerifyFragment extends AuthFragment {
         waitField.setMovementMethod(LinkMovementMethod.getInstance());
         addCodeFields(getArguments().getInt(CODE_SIZE));
         ((AppCompatTextView) rootView.findViewById(R.id.phone_instruction)).setText(String.format(getString(R.string.type_in), getArguments().getString(PHONE_KEY)));
-        authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY));
+        getAuthActivity().authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), false);
+
 
         return rootView;
     }
@@ -149,9 +159,7 @@ public class AuthVerifyFragment extends AuthFragment {
                 AppCompatEditText child = (AppCompatEditText) viewGroup.getChildAt(index + 1);
                 child.requestFocus();
             } else {
-                if (!verificationId.isEmpty()) {
-                    manualAuth();
-                }
+                manualAuth();
             }
 
         }
@@ -168,34 +176,24 @@ public class AuthVerifyFragment extends AuthFragment {
         return code;
     }
 
-    int count;
-    Runnable runnable;
-    Handler handler = new Handler();
-    String verificationId = "";
-    PhoneAuthProvider.ForceResendingToken forceResendingToken;
 
     private void manualAuth() {
         ViewGroup viewGroup = (LinearLayout) rootView.findViewById(R.id.code_layout_grp);
         if (getCode(viewGroup).length() == 6) {
-            PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, getCode(viewGroup));
-            signInWithPhoneAuthCredential(credential);
+            getAuthActivity().manualAuth(getCode(viewGroup));
         }
     }
 
 
-    @Override
-    protected void codeSent(final String verificationId, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-
-        this.verificationId = verificationId;
-        this.forceResendingToken = forceResendingToken;
+    public void codeSent() {
         manualAuth();
-        count = 60;
+        secCounter = 60;
         runnable = new Runnable() {
             @Override
             public void run() {
-                count--;
-                if (count != 0) {
-                    String dec = "Please wait <a href=''>" + ((count < 10) ? ("0" + count) : count) + " secs</a>";
+                secCounter--;
+                if (secCounter != 0) {
+                    String dec = "Please wait <a href=''>" + ((secCounter < 10) ? ("0" + secCounter) : secCounter) + " secs</a>";
                     handler.postDelayed(this, 1000);
                     CharSequence sequence = Html.fromHtml(dec);
                     waitField.setText(sequence);
@@ -211,33 +209,23 @@ public class AuthVerifyFragment extends AuthFragment {
 
     }
 
+    public void timeOut() {
+        handler.removeCallbacks(runnable);
+        initResend();
+    }
+
+
+    public void verificationFailure(Exception e) {
+        statusField.setText(e.getMessage());
+        statusField.setVisibility(View.VISIBLE);
+    }
+
+
     private void initResend() {
         String dec = "<a href=''><b>Resend Code<b></a>";
         CharSequence sequence = Html.fromHtml(dec);
         waitField.setText(sequence);
         stripUnderlines(waitField, true);
-    }
-
-    @Override
-    protected void timeOut() {
-        handler.removeCallbacks(runnable);
-        initResend();
-    }
-
-    @Override
-    protected void verificationFailure(Exception e) {
-        statusField.setText(e.getMessage());
-        statusField.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    protected void completed(PhoneAuthCredential phoneAuthCredential) {
-        PhoneNumberVerifier.Countries countries = PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY));
-        try {
-            AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, countries.ToCountryCode(countries, getArguments().getString(PHONE_KEY)));
-        } catch (PhoneFormatException e) {
-            e.printStackTrace();
-        }
     }
 
 
@@ -253,7 +241,7 @@ public class AuthVerifyFragment extends AuthFragment {
                 public void onClick(String url) {
                     if (shouldClick) {
                         waitField.setText("Please wait.");
-                        authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), forceResendingToken);
+                        getAuthActivity().authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
                         statusField.setVisibility(View.GONE);
 //                        authPhone();
                     }
@@ -264,13 +252,6 @@ public class AuthVerifyFragment extends AuthFragment {
         textView.setText(s);
     }
 
-    private void hideKeyboard() {
-        View view = getActivity().getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
 
     private void showKeyboard() {
         View view = getActivity().getCurrentFocus();

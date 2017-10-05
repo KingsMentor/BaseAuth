@@ -20,11 +20,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
 
 import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneModel;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import xyz.belvi.baseauth.auth.base.AuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.countrySelector.CountrySelectorActivity;
 import xyz.belvi.baseauth.R;
@@ -43,11 +43,11 @@ public class AuthDetailsFragment extends Fragment {
     private View rootView;
     PhoneNumberVerifier.Countries selectedCountry;
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.auth_fragment, container, false);
-        FirebaseAuth.getInstance();
         selectedCountry = new PhoneNumberVerifier().getUserCountry(getContext());
         final AppCompatEditText ccCompatEditText = rootView.findViewById(R.id.country_code_selector);
         phoneCompatEditText = rootView.findViewById(R.id.phone_number);
@@ -92,7 +92,7 @@ public class AuthDetailsFragment extends Fragment {
                         .beginTransaction()
                         .addToBackStack(null)
                         .add(R.id.auth_content_frame, new AuthVerifyFragment()
-                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name(), AuthListeners.AUTH_CODE_LENGTH.FIREBASE_CODE_LENGTH))
+                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name(), getActivity().getIntent().getIntExtra(AuthActivity.CODE_LENGTH, 0)))
                         .commitAllowingStateLoss();
             }
         });

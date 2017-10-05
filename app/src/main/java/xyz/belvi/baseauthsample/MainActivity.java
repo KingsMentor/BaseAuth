@@ -9,16 +9,16 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.PhoneAuthCredential;
 
-import xyz.belvi.baseauth.callbacks.AuthListeners;
-import xyz.belvi.baseauth.auth.base.AuthActivity;
+import xyz.belvi.baseauth_firebase.auth.FireAuthActivity;
+import xyz.belvi.baseauth_firebase.callbacks.FirebaseAuthListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AuthActivity.startFirebasePhoneAuth(this, new AuthListeners.FirebaseAuthListener() {
-            @Override
+        FireAuthActivity.startFirebasePhoneAuth(this, new FirebaseAuthListener() {
             public void authIgnored() {
 
             }
@@ -27,11 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            @Override
             public void onAuthCompleted(PhoneAuthCredential credential, String phoneNumber) {
-                Toast.makeText(MainActivity.this, "finished", Toast.LENGTH_LONG).show();
-            }
 
+            }
         }, R.style.BaseAuthStyle);
     }
 

@@ -1,1 +1,1 @@
-include ':app', ':baseauth'
+include ':app', ':baseauth', ':baseauth-firebase', ':baseauth-sinch', ':baseauth-core'

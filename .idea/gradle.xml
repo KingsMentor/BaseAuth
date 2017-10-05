@@ -10,6 +10,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baseauth" />
+            <option value="$PROJECT_DIR$/baseauth-core" />
+            <option value="$PROJECT_DIR$/baseauth-firebase" />
+            <option value="$PROJECT_DIR$/baseauth-sinch" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
