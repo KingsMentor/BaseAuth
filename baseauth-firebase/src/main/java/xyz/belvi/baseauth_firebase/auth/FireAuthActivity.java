@@ -11,7 +11,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
-import xyz.belvi.baseauth.auth.base.AuthActivity;
+import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth_firebase.callbacks.FirebaseAuthListener;
 
@@ -19,17 +19,17 @@ import xyz.belvi.baseauth_firebase.callbacks.FirebaseAuthListener;
  * Created by zone2 on 10/5/17.
  */
 
-public class FireAuthActivity extends AuthActivity {
+public class FireAuthActivity extends OpenAuthActivity {
 
-    FireAuthOperations fireAuthOperations;
+    private FireAuthOperations fireAuthOperations;
     private PhoneAuthProvider.ForceResendingToken mForceResendingToken;
     PhoneNumberVerifier.Countries selectedCountry;
     private String mVerificationId, phone;
-    private AuthListeners.Auths mAuths;
+    private AuthListeners.AuthResults authResults;
 
     public static void startFirebasePhoneAuth(Context context, FirebaseAuthListener authListener, @StyleRes int styleRes) {
         AuthHandler.init(authListener);
-        context.startActivity(new Intent(context, AuthActivity.class)
+        context.startActivity(new Intent(context, FireAuthActivity.class)
                 .putExtra(STYLE_KEY, styleRes)
                 .putExtra(CODE_LENGTH, FirebaseAuthListener.FIREBASE_CODE_LENGTH)
         );
@@ -42,15 +42,15 @@ public class FireAuthActivity extends AuthActivity {
             protected void codeSent(String verificationId, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 mForceResendingToken = forceResendingToken;
                 mVerificationId = verificationId;
-                mAuths.codeSent();
+                authResults.codeSent();
             }
 
             protected void timeOut() {
-                mAuths.timeOut();
+                authResults.timeOut();
             }
 
             protected void verificationFailure(Exception e) {
-                mAuths.verificationFailure(e);
+                authResults.verificationFailure(e);
             }
 
             protected void completed(PhoneAuthCredential phoneAuthCredential) {
@@ -65,8 +65,8 @@ public class FireAuthActivity extends AuthActivity {
         };
     }
 
-    protected void bindListener(AuthListeners.Auths auths) {
-        mAuths = auths;
+    protected void bindAuthResult(AuthListeners.AuthResults authResults) {
+        this.authResults = authResults;
     }
 
 

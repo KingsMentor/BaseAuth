@@ -31,7 +31,7 @@ import xyz.belvi.baseauth.custom.URLSpanNoUnderline;
  * Created by zone2 on 9/19/17.
  */
 
-public class AuthVerifyFragment extends Fragment implements AuthListeners.Auths {
+public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthResults {
 
 
     private final String PHONE_KEY = "PHONE_KEY";
@@ -62,7 +62,7 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.Auths 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        getAuthActivity().bindListener(this);
+        getAuthActivity().bindAuthResult(this);
         rootView = inflater.inflate(R.layout.auth_verify_fragment, container, false);
         waitField = (AppCompatTextView) rootView.findViewById(R.id.wait_field);
         statusField = (AppCompatTextView) rootView.findViewById(R.id.incorrect_code);

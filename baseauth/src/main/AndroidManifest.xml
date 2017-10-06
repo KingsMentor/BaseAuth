@@ -6,7 +6,7 @@
     <application>
 
         <activity
-            android:name=".auth.base.AuthActivity"
+            android:name=".auth.base.OpenAuthActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity

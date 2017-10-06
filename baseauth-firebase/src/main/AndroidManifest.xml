@@ -1,2 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="xyz.belvi.baseauth_firebase" />
+    package="xyz.belvi.baseauth_firebase">
+
+    <application>
+
+        <activity
+            android:name=".auth.FireAuthActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+    </application>
+
+</manifest>

@@ -24,7 +24,7 @@ import android.widget.TextView;
 import appzonegroup.com.phonenumberverifier.PhoneFormatException;
 import appzonegroup.com.phonenumberverifier.PhoneModel;
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
-import xyz.belvi.baseauth.auth.base.AuthActivity;
+import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.countrySelector.CountrySelectorActivity;
 import xyz.belvi.baseauth.R;
@@ -92,7 +92,7 @@ public class AuthDetailsFragment extends Fragment {
                         .beginTransaction()
                         .addToBackStack(null)
                         .add(R.id.auth_content_frame, new AuthVerifyFragment()
-                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name(), getActivity().getIntent().getIntExtra(AuthActivity.CODE_LENGTH, 0)))
+                                .startFragment(phoneCompatEditText.getText().toString(), selectedCountry.name(), getActivity().getIntent().getIntExtra(OpenAuthActivity.CODE_LENGTH, 0)))
                         .commitAllowingStateLoss();
             }
         });

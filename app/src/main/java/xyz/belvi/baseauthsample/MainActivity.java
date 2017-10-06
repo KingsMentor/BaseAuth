@@ -20,15 +20,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FireAuthActivity.startFirebasePhoneAuth(this, new FirebaseAuthListener() {
             public void authIgnored() {
+                Toast.makeText(MainActivity.this, "auth ignored", Toast.LENGTH_LONG).show();
 
             }
 
             public void helpClicked(Activity activity) {
+                Toast.makeText(MainActivity.this, "help clicked", Toast.LENGTH_LONG).show();
 
             }
 
             public void onAuthCompleted(PhoneAuthCredential credential, String phoneNumber) {
-
+                Toast.makeText(MainActivity.this, "auth completed for" + phoneNumber, Toast.LENGTH_LONG).show();
             }
         }, R.style.BaseAuthStyle);
     }

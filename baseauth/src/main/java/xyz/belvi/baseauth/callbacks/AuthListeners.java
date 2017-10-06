@@ -14,7 +14,7 @@ public interface AuthListeners {
 
     void helpClicked(Activity activity);
 
-    interface Auths {
+    interface AuthResults {
         abstract void codeSent();
 
         abstract void timeOut();

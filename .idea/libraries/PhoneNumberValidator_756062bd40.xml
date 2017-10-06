@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="PhoneNumberValidator-756062bd40">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhoneNumberValidator-756062bd40.aar/3313711bbbd9c68dd85437ebc4260872/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhoneNumberValidator-756062bd40.aar/3313711bbbd9c68dd85437ebc4260872/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhoneNumberValidator-756062bd40.aar/69d7605f054a2506605c2f01ed71d0a6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/PhoneNumberValidator-756062bd40.aar/69d7605f054a2506605c2f01ed71d0a6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

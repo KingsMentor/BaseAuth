@@ -7,7 +7,7 @@
     <color name="ba_blue">#42a5f5</color>
     <color name="ba_background">#fcfcfc</color>
     <color name="ba_btn_disabled">#dfdfdf</color>
-    <color name="ba_btn_enabled">#dfdfdf</color>
+    <color name="ba_btn_enabled">#ffffff</color>
     <color name="ba_txt_grey">#696969</color>
     <color name="ba_auth_code">#42a5f5</color>
     <color name="ba_white">#FFFFFF</color>

@@ -1,16 +1,10 @@
 package xyz.belvi.baseauth.auth.base;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -24,11 +18,10 @@ import xyz.belvi.baseauth.R;
  * Created by zone2 on 9/18/17.
  */
 
-abstract public class AuthActivity extends AppCompatActivity  {
+abstract class AuthActivity extends AppCompatActivity {
 
 
     protected static final String STYLE_KEY = " xyz.belvi.baseauth.auth.base.STYLE_KEY";
-    public static final String CODE_LENGTH = " xyz.belvi.baseauth.auth.base.CODE_LENGTH";
     private boolean showHelp;
 
 
@@ -63,7 +56,7 @@ abstract public class AuthActivity extends AppCompatActivity  {
         return super.onOptionsItemSelected(item);
     }
 
-    protected abstract void bindListener(AuthListeners.Auths auths);
+    protected abstract void bindAuthResult(AuthListeners.AuthResults authResults);
 
     protected abstract void manualAuth(String code);
 
