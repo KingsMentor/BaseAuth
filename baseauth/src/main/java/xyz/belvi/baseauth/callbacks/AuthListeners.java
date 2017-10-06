@@ -1,7 +1,7 @@
 package xyz.belvi.baseauth.callbacks;
 
 import android.app.Activity;
-
+import android.content.Context;
 
 
 /**
@@ -12,7 +12,7 @@ public interface AuthListeners {
 
     void authIgnored();
 
-    void helpClicked(Activity activity);
+    void helpClicked(Context activity);
 
     interface AuthResults {
         abstract void codeSent();

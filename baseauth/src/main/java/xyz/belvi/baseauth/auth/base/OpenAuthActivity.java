@@ -1,5 +1,7 @@
 package xyz.belvi.baseauth.auth.base;
 
+import android.content.Context;
+
 import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 
@@ -10,6 +12,10 @@ import xyz.belvi.baseauth.callbacks.AuthListeners;
 public class OpenAuthActivity extends AuthActivity {
 
     public static final String CODE_LENGTH = " xyz.belvi.baseauth.auth.base.CODE_LENGTH";
+
+    protected void handleHelp(Context context) {
+
+    }
 
     protected void bindAuthResult(AuthListeners.AuthResults auths) {
 

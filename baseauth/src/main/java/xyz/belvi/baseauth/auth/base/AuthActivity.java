@@ -1,8 +1,11 @@
 package xyz.belvi.baseauth.auth.base;
 
+import android.content.Context;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -53,8 +56,12 @@ abstract class AuthActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        handleHelp(this);
         return super.onOptionsItemSelected(item);
     }
+
+
+    protected abstract void handleHelp(Context context);
 
     protected abstract void bindAuthResult(AuthListeners.AuthResults authResults);
 

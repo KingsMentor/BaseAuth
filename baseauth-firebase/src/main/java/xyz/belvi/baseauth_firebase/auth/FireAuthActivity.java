@@ -65,10 +65,6 @@ public class FireAuthActivity extends OpenAuthActivity {
         };
     }
 
-    protected void bindAuthResult(AuthListeners.AuthResults authResults) {
-        this.authResults = authResults;
-    }
-
 
     @Override
     public void onBackPressed() {
@@ -80,6 +76,12 @@ public class FireAuthActivity extends OpenAuthActivity {
         }
     }
 
+    @Override
+    protected void bindAuthResult(AuthListeners.AuthResults authResults) {
+        this.authResults = authResults;
+    }
+
+    @Override
     protected void manualAuth(String code) {
         if (!mVerificationId.isEmpty()) {
             PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, code);
@@ -87,7 +89,12 @@ public class FireAuthActivity extends OpenAuthActivity {
         }
     }
 
+    @Override
+    protected void handleHelp(Context context) {
+        AuthHandler.getsAuthListener().helpClicked(context);
+    }
 
+    @Override
     protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber, boolean forceResendingToken) {
         this.selectedCountry = selectedCountry;
         this.phone = phoneNumber;

@@ -2,6 +2,7 @@ package xyz.belvi.baseauthsample;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -19,16 +20,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FireAuthActivity.startFirebasePhoneAuth(this, new FirebaseAuthListener() {
+            @Override
             public void authIgnored() {
                 Toast.makeText(MainActivity.this, "auth ignored", Toast.LENGTH_LONG).show();
 
             }
 
-            public void helpClicked(Activity activity) {
+            @Override
+            public void helpClicked(Context context) {
                 Toast.makeText(MainActivity.this, "help clicked", Toast.LENGTH_LONG).show();
 
             }
 
+            @Override
             public void onAuthCompleted(PhoneAuthCredential credential, String phoneNumber) {
                 Toast.makeText(MainActivity.this, "auth completed for" + phoneNumber, Toast.LENGTH_LONG).show();
             }
