@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="baseauth-1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/baseauth-1.0.1.aar/696b997f8266bc4651330def5dc83ae9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/baseauth-1.0.1.aar/696b997f8266bc4651330def5dc83ae9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.belvi.auth/baseauth/1.0.1/187c87157eed9b1b82f7771dab847fc74c4f0120/baseauth-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
