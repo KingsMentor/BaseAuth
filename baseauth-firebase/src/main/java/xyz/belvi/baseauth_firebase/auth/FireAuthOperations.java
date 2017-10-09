@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
+import com.belvi.validator.PhoneFormatException;
+import com.belvi.validator.PhoneNumberValidator;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -14,8 +16,6 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-import appzonegroup.com.phonenumberverifier.PhoneFormatException;
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 
 /**
  * Created by zone2 on 9/19/17.
@@ -33,14 +33,13 @@ abstract class FireAuthOperations {
         this.activity = activity;
     }
 
-    protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber) {
+    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber) {
         authPhone(selectedCountry, phoneNumber, null);
     }
 
-    protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber, PhoneAuthProvider.ForceResendingToken resendingToken) {
+    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, PhoneAuthProvider.ForceResendingToken resendingToken) {
         try {
-            phoneNumber = selectedCountry.ToCountryCode(selectedCountry,
-                    phoneNumber);
+            phoneNumber = selectedCountry.toCountryCode(phoneNumber);
             PhoneAuthProvider.getInstance().verifyPhoneNumber(
                     phoneNumber,        // Phone number to verify
                     60,                 // Timeout duration

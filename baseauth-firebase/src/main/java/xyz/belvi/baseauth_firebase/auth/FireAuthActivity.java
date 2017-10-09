@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
 
+import com.belvi.validator.PhoneFormatException;
+import com.belvi.validator.PhoneNumberValidator;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
-import appzonegroup.com.phonenumberverifier.PhoneFormatException;
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth_firebase.callbacks.FirebaseAuthListener;
@@ -23,7 +23,7 @@ public class FireAuthActivity extends OpenAuthActivity {
 
     private FireAuthOperations fireAuthOperations;
     private PhoneAuthProvider.ForceResendingToken mForceResendingToken;
-    PhoneNumberVerifier.Countries selectedCountry;
+    PhoneNumberValidator.Country selectedCountry;
     private String mVerificationId, phone;
     private AuthListeners.AuthResults authResults;
 
@@ -56,7 +56,7 @@ public class FireAuthActivity extends OpenAuthActivity {
             protected void completed(PhoneAuthCredential phoneAuthCredential) {
 
                 try {
-                    AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, selectedCountry.ToCountryCode(selectedCountry, phone));
+                    AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, selectedCountry.toCountryCode(phone));
                 } catch (PhoneFormatException e) {
                     e.printStackTrace();
                 }
@@ -95,7 +95,7 @@ public class FireAuthActivity extends OpenAuthActivity {
     }
 
     @Override
-    protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber, boolean forceResendingToken) {
+    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken) {
         this.selectedCountry = selectedCountry;
         this.phone = phoneNumber;
         if (forceResendingToken) {

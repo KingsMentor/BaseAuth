@@ -113,12 +113,12 @@
     <orderEntry type="library" name="animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="support-fragment-26.1.0" level="project" />
     <orderEntry type="library" name="runtime-1.0.0" level="project" />
-    <orderEntry type="library" name="PhoneNumberValidator-756062bd40" level="project" />
     <orderEntry type="library" name="common-1.0.0" level="project" />
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="firebase-auth-11.4.0" level="project" />
     <orderEntry type="library" name="play-services-basement-11.4.0" level="project" />
+    <orderEntry type="library" name="phonenumbervalidator-1.0.0" level="project" />
     <orderEntry type="library" name="design-26.1.0" level="project" />
     <orderEntry type="library" name="transition-26.1.0" level="project" />
     <orderEntry type="library" name="play-services-tasks-11.4.0" level="project" />

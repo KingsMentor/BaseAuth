@@ -2,9 +2,20 @@
 <resources>
     <dimen name="ba_layout_padding">32dp</dimen>
     <dimen name="verification_code_text_size">24sp</dimen>
+    <dimen name="vc_txt_size">18sp</dimen>
+    <dimen name="type_in_desc_txt_size">16sp</dimen>
+    <dimen name="type_in_desc_margin_top">32dp</dimen>
+    <dimen name="type_in_desc_margin_bottom">16dp</dimen>
+    <dimen name="verification_layout_padding">32dp</dimen>
+    <dimen name="verification_code_width">42dp</dimen>
     <dimen name="details_desc">16sp</dimen>
     <dimen name="details_margin_top">16dp</dimen>
     <dimen name="phone_field_text_size">18sp</dimen>
     <dimen name="next_btn_txt_size">14sp</dimen>
     <dimen name="next_btn_padding">16dp</dimen>
+    <dimen name="wait_field_txt_size">16sp</dimen>
+    <dimen name="receive_code_confirmation">14sp</dimen>
+    <dimen name="receive_code_confirmation_top_margin">16dp</dimen>
+    <dimen name="verification_status_text_size">12sp</dimen>
+    <dimen name="verification_status_top_margin">16dp</dimen>
 </resources>

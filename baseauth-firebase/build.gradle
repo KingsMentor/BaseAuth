@@ -25,6 +25,7 @@ android {
 
 dependencies {
     compile project(':baseauth')
+//    compile 'com.belvi.auth:baseauth:1.0.0'
     implementation 'com.google.firebase:firebase-auth:11.4.0'
 }
 
@@ -43,7 +44,7 @@ ext {
     siteUrl = 'https://github.com/KingsMentor/BaseAuth'
     gitUrl = 'https://github.com/KingsMentor/BaseAuth.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'kingsmentor'
     developerName = 'Nosakhare Belvi'

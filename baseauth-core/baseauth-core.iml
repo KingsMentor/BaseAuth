@@ -87,7 +87,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
@@ -112,10 +111,10 @@
     <orderEntry type="library" name="animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="support-fragment-26.1.0" level="project" />
     <orderEntry type="library" name="runtime-1.0.0" level="project" />
-    <orderEntry type="library" name="PhoneNumberValidator-756062bd40" level="project" />
     <orderEntry type="library" name="common-1.0.0" level="project" />
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="phonenumbervalidator-1.0.0" level="project" />
     <orderEntry type="library" name="design-26.1.0" level="project" />
     <orderEntry type="library" name="transition-26.1.0" level="project" />
     <orderEntry type="module" module-name="baseauth-sinch" />

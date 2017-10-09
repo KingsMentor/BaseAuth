@@ -22,7 +22,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import com.belvi.validator.PhoneFormatException;
+import com.belvi.validator.PhoneNumberValidator;
+
 import xyz.belvi.baseauth.R;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.custom.URLSpanNoUnderline;
@@ -69,8 +71,14 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
         waitField.setLinksClickable(true);
         waitField.setMovementMethod(LinkMovementMethod.getInstance());
         addCodeFields(getArguments().getInt(CODE_SIZE));
-        ((AppCompatTextView) rootView.findViewById(R.id.phone_instruction)).setText(String.format(getString(R.string.type_in), getArguments().getString(PHONE_KEY)));
-        getAuthActivity().authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), false);
+        PhoneNumberValidator.Country country = PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY));
+        String phone = getArguments().getString(PHONE_KEY);
+        try {
+            ((AppCompatTextView) rootView.findViewById(R.id.phone_instruction)).setText(String.format(getString(R.string.type_in), country.toCountryCode(phone)));
+            getAuthActivity().authPhone(country, phone, false);
+        } catch (PhoneFormatException e) {
+            e.printStackTrace();
+        }
 
 
         return rootView;
@@ -241,7 +249,7 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
                 public void onClick(String url) {
                     if (shouldClick) {
                         waitField.setText("Please wait.");
-                        getAuthActivity().authPhone(PhoneNumberVerifier.Countries.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
+                        getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
                         statusField.setVisibility(View.GONE);
 //                        authPhone();
                     }

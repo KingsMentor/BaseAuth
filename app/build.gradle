@@ -21,7 +21,12 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
 dependencies {
+//    compile 'com.belvi.auth:baseauth-firebase:1.0.1'
     compile 'com.google.firebase:firebase-auth:11.4.0'
     compile project(':baseauth-firebase')
 }

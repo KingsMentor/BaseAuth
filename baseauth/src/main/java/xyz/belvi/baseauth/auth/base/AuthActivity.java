@@ -12,7 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import com.belvi.validator.PhoneNumberValidator;
+
 import xyz.belvi.baseauth.auth.AuthDetailsFragment;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.R;
@@ -67,7 +68,7 @@ abstract class AuthActivity extends AppCompatActivity {
 
     protected abstract void manualAuth(String code);
 
-    protected abstract void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber, boolean forceResendingToken);
+    protected abstract void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken);
 
 
 }

@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import com.belvi.validator.PhoneNumberValidator;
+
 import xyz.belvi.baseauth.R;
 
 /**
@@ -14,9 +15,9 @@ import xyz.belvi.baseauth.R;
  */
 
 abstract public class CountrySelectorAdapter extends RecyclerView.Adapter<CountrySelectorHolder> {
-    private PhoneNumberVerifier.Countries selectedCountries;
+    private PhoneNumberValidator.Country selectedCountries;
 
-    public CountrySelectorAdapter(PhoneNumberVerifier.Countries countries) {
+    public CountrySelectorAdapter(PhoneNumberValidator.Country countries) {
         this.selectedCountries = countries;
 
     }
@@ -28,9 +29,9 @@ abstract public class CountrySelectorAdapter extends RecyclerView.Adapter<Countr
 
     @Override
     public void onBindViewHolder(CountrySelectorHolder holder, final int position) {
-        holder.getCountryName().setText(PhoneNumberVerifier.Countries.values()[position].getCountryName());
-        holder.getCountryCode().setText("( +" + String.valueOf(PhoneNumberVerifier.Countries.values()[position].getCountryCode()) + " )");
-        if (selectedCountries == PhoneNumberVerifier.Countries.values()[position]) {
+        holder.getCountryName().setText(PhoneNumberValidator.Country.values()[position].getCountryName());
+        holder.getCountryCode().setText("( +" + String.valueOf(PhoneNumberValidator.Country.values()[position].getCountryCode()) + " )");
+        if (selectedCountries == PhoneNumberValidator.Country.values()[position]) {
             holder.getCountryName().setTypeface(null, Typeface.BOLD);
             holder.getCountryCode().setTypeface(null, Typeface.BOLD);
         } else {
@@ -40,15 +41,15 @@ abstract public class CountrySelectorAdapter extends RecyclerView.Adapter<Countr
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onCountrySelected(PhoneNumberVerifier.Countries.values()[position]);
+                onCountrySelected(PhoneNumberValidator.Country.values()[position]);
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return PhoneNumberVerifier.Countries.values().length;
+        return PhoneNumberValidator.Country.values().length;
     }
 
-    abstract public void onCountrySelected(PhoneNumberVerifier.Countries countries);
+    abstract public void onCountrySelected(PhoneNumberValidator.Country countries);
 }

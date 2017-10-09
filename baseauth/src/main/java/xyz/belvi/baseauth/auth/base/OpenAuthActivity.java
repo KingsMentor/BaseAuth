@@ -2,7 +2,8 @@ package xyz.belvi.baseauth.auth.base;
 
 import android.content.Context;
 
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import com.belvi.validator.PhoneNumberValidator;
+
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 
 /**
@@ -25,7 +26,7 @@ public class OpenAuthActivity extends AuthActivity {
 
     }
 
-    protected void authPhone(PhoneNumberVerifier.Countries selectedCountry, String phoneNumber, boolean forceResendingToken) {
+    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken) {
 
     }
 }

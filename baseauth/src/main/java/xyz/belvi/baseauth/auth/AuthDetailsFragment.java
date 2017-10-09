@@ -21,9 +21,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import appzonegroup.com.phonenumberverifier.PhoneFormatException;
-import appzonegroup.com.phonenumberverifier.PhoneModel;
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
+import com.belvi.validator.PhoneFormatException;
+import com.belvi.validator.PhoneModel;
+import com.belvi.validator.PhoneNumberValidator;
+
 import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.countrySelector.CountrySelectorActivity;
@@ -41,14 +42,14 @@ public class AuthDetailsFragment extends Fragment {
     private AppCompatEditText phoneCompatEditText;
     private AppCompatButton verifyBtn;
     private View rootView;
-    PhoneNumberVerifier.Countries selectedCountry;
+    PhoneNumberValidator.Country selectedCountry;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.auth_fragment, container, false);
-        selectedCountry = new PhoneNumberVerifier().getUserCountry(getContext());
+        selectedCountry = new PhoneNumberValidator().getUserCountry(getContext());
         final AppCompatEditText ccCompatEditText = rootView.findViewById(R.id.country_code_selector);
         phoneCompatEditText = rootView.findViewById(R.id.phone_number);
         phoneCompatEditText.setText(getLineNumber());
@@ -107,7 +108,7 @@ public class AuthDetailsFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == R_C && resultCode == Activity.RESULT_OK) {
-            selectedCountry = PhoneNumberVerifier.Countries.valueOf(data.getStringExtra(CountrySelectorActivity.SELECTED_COUNTRY));
+            selectedCountry = PhoneNumberValidator.Country.valueOf(data.getStringExtra(CountrySelectorActivity.SELECTED_COUNTRY));
             setCountryCodeText();
         }
     }
@@ -133,7 +134,7 @@ public class AuthDetailsFragment extends Fragment {
         if (selectedCountry != null) {
             String phoneNumber = phoneCompatEditText.getText().toString();
             try {
-                PhoneModel phoneModel = selectedCountry.isNumberValid(selectedCountry, phoneNumber);
+                PhoneModel phoneModel = selectedCountry.isNumberValid( phoneNumber);
                 verifyBtn.setEnabled(phoneModel.isValidPhoneNumber());
             } catch (PhoneFormatException e) {
                 e.printStackTrace();

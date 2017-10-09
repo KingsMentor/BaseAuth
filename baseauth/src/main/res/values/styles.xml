@@ -16,7 +16,7 @@
     </style>
 
     <style name="CodeFieldStyle" parent="AppTheme">
-        <item name="android:layout_width">42sp</item>
+        <item name="android:layout_width">@dimen/verification_code_width</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
         <item name="android:gravity">center</item>
@@ -25,7 +25,7 @@
         <item name="android:maxLength">1</item>
         <item name="android:cursorVisible">false</item>
         <item name="android:textColor">@color/ba_auth_code</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/verification_code_text_size</item>
     </style>
 
 

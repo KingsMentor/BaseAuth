@@ -9,9 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.belvi.validator.PhoneNumberValidator;
+
 import java.util.Arrays;
 
-import appzonegroup.com.phonenumberverifier.PhoneNumberVerifier;
 import xyz.belvi.baseauth.R;
 
 public class CountrySelectorActivity extends AppCompatActivity {
@@ -35,17 +36,17 @@ public class CountrySelectorActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.cc_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setHasFixedSize(false);
-        PhoneNumberVerifier.Countries countries = null;
+        PhoneNumberValidator.Country countries = null;
         try {
-            countries = PhoneNumberVerifier.Countries.valueOf(getIntent().getStringExtra(SELECTED_COUNTRY));
+            countries = PhoneNumberValidator.Country.valueOf(getIntent().getStringExtra(SELECTED_COUNTRY));
         } catch (NullPointerException ex) {
 
         }
         if (countries != null)
-            recyclerView.scrollToPosition(Arrays.asList(PhoneNumberVerifier.Countries.values()).indexOf(countries));
+            recyclerView.scrollToPosition(Arrays.asList(PhoneNumberValidator.Country.values()).indexOf(countries));
         recyclerView.setAdapter(new CountrySelectorAdapter(countries) {
             @Override
-            public void onCountrySelected(PhoneNumberVerifier.Countries countries) {
+            public void onCountrySelected(PhoneNumberValidator.Country countries) {
                 setResult(Activity.RESULT_OK, getIntent().putExtra(SELECTED_COUNTRY, countries.name()));
                 finish();
             }
