@@ -1,6 +1,7 @@
 # BaseAuth
 Phone number authentication leveraging on different phone number authentication platform like firebase, sinch e.t.c
-
+ [ ![Download](https://api.bintray.com/packages/kingsmentor/maven/BaseAuth/images/download.svg) ](https://bintray.com/kingsmentor/maven/BaseAuth/_latestVersion)
+ 
 ## Sample
 
 ## Adding as a dependency
