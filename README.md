@@ -3,6 +3,7 @@ Phone number authentication leveraging on different phone number authentication 
  [ ![base-fireauth](https://api.bintray.com/packages/kingsmentor/maven/BaseAuth/images/download.svg) ](https://bintray.com/kingsmentor/maven/BaseAuth/_latestVersion)
  
 ## Sample
+![Lib Sample](https://github.com/KingsMentor/BaseAuth/blob/master/sample/base_auth_sample.gif)
 
 ## Adding as a dependency
 
