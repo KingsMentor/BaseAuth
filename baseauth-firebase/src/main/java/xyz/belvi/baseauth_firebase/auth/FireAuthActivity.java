@@ -40,7 +40,7 @@ public class FireAuthActivity extends OpenAuthActivity {
         context.startActivity(new Intent(context, FireAuthActivity.class)
                 .putExtra(STYLE_KEY, styleRes)
                 .putExtra(CODE_LENGTH, FirebaseAuthListener.AUTH_CODE_LENGTH)
-                .putExtra(AUTH_MODE_KEY, AUTH_MODE.FIRE_BASE)
+                .putExtra(AUTH_MODE_KEY, AUTH_MODE.FIRE_BASE.name())
         );
     }
 

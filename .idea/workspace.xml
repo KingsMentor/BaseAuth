@@ -12,40 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d39c1aea-6f25-44bc-b13c-c8619bc0c561" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/dexter_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxpermissions_0_9_4.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/xyz/belvi/baseauthsample/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/xyz/belvi/baseauthsample/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-core/baseauth-core.iml" afterPath="$PROJECT_DIR$/baseauth-core/baseauth-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-firebase/baseauth-firebase.iml" afterPath="$PROJECT_DIR$/baseauth-firebase/baseauth-firebase.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java" afterPath="$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-sinch/baseauth-sinch.iml" afterPath="$PROJECT_DIR$/baseauth-sinch/baseauth-sinch.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthActivity.java" afterPath="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthOperations.java" afterPath="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthOperations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/baseauth.iml" afterPath="$PROJECT_DIR$/baseauth/baseauth.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/build.gradle" afterPath="$PROJECT_DIR$/baseauth/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthActivity.java" afterPath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthVerifyFragment.java" afterPath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthVerifyFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/OpenAuthActivity.java" afterPath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/OpenAuthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/custom/URLSpanNoUnderline.java" afterPath="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/custom/URLSpanNoUnderline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/res/layout/auth_verify_fragment.xml" afterPath="$PROJECT_DIR$/baseauth/src/main/res/layout/auth_verify_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseauth/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/baseauth/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <list id="e45c3aa1-6bd0-4870-94a9-b839ca839af9" name="don't push" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,10 +53,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SinchAuthActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SinchAuthActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="1426">
               <caret line="112" column="68" lean-forward="false" selection-start-line="112" selection-start-column="68" selection-end-line="112" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -125,23 +95,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FireAuthActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FireAuthActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+            <state relative-caret-position="279">
+              <caret line="42" column="67" lean-forward="false" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
+                <element signature="e#2345#2346#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FireAuthOperations.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthOperations.java">
+      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AUTH_MODE.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AUTH_MODE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthVerifyFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthVerifyFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,28 +152,8 @@
       <file leaf-file-name="AuthActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="69" column="22" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseauth-core/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseauth/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="31" column="37" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="155">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -5889,7 +5861,6 @@
         <option value="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/callbacks/SinchAuthListener.java" />
         <option value="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/callbacks/AuthListeners.java" />
         <option value="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AUTH_MODE.java" />
-        <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/baseauth/src/main/res/layout/auth_verify_fragment.xml" />
         <option value="$PROJECT_DIR$/baseauth/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/custom/URLSpanNoUnderline.java" />
@@ -5902,6 +5873,7 @@
         <option value="$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/belvi/baseauthsample/MainActivity.java" />
+        <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java" />
       </list>
     </option>
@@ -6290,7 +6262,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664427116" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664707658" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -6338,7 +6310,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664427116" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664707658" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -6521,7 +6493,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664427117" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507664707660" />
       </method>
     </configuration>
     <list size="1">
@@ -6635,7 +6607,7 @@
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21728595" sideWeight="0.5054645" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.397541" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34972677" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34972677" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -7025,27 +6997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AUTH_MODE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#196#197#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
-            <element signature="e#316#317#0" expanded="false" />
-            <element signature="e#355#356#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/AuthDetailsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -7083,27 +7034,6 @@
         <state relative-caret-position="150">
           <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthVerifyFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="236" column="141" lean-forward="false" selection-start-line="236" selection-start-column="141" selection-end-line="236" selection-end-column="141" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1874#1875#0" expanded="false" />
-            <element signature="e#1925#1926#0" expanded="false" />
-            <element signature="e#2851#2878#0" expanded="false" />
-            <element signature="e#3962#4723#0" expanded="false" />
-            <element signature="e#4722#4723#0" expanded="false" />
-            <element signature="e#4763#4995#0" expanded="false" />
-            <element signature="e#4994#4995#0" expanded="false" />
-            <element signature="e#5041#5304#0" expanded="false" />
-            <element signature="e#5303#5304#0" expanded="false" />
-            <element signature="e#7535#8126#0" expanded="false" />
-            <element signature="e#8125#8126#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -7208,9 +7138,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/OpenAuthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AUTH_MODE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthVerifyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="42" column="67" lean-forward="false" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/baseauth-sinch/src/main/java/xyz/belvi/baseauth_sinch/auth/SinchAuthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="1426">
           <caret line="112" column="68" lean-forward="false" selection-start-line="112" selection-start-column="68" selection-end-line="112" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -7220,32 +7202,6 @@
             <element signature="e#2138#2139#0" expanded="true" />
             <element signature="e#2201#2202#0" expanded="true" />
             <element signature="e#2267#2268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/OpenAuthActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseauth/src/main/java/xyz/belvi/baseauth/auth/base/AuthActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="69" column="22" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseauth-firebase/src/main/java/xyz/belvi/baseauth_firebase/auth/FireAuthActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
