@@ -9,7 +9,7 @@ import xyz.belvi.baseauth.callbacks.AuthListeners;
  */
 
 public interface FirebaseAuthListener extends AuthListeners {
-    int FIREBASE_CODE_LENGTH = 6;
+    int AUTH_CODE_LENGTH = 6;
     void onAuthCompleted(PhoneAuthCredential credential, String phoneNumber);
 }
 

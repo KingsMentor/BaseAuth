@@ -24,8 +24,8 @@ android {
 }
 
 dependencies {
-//    compile project(':baseauth')
-    compile 'com.belvi.auth:baseauth:1.0.1'
+    compile project(':baseauth')
+//    compile 'com.belvi.auth:baseauth:1.0.1'
     implementation 'com.google.firebase:firebase-auth:11.4.2'
 }
 

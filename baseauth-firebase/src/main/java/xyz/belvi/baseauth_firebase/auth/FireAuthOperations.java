@@ -37,9 +37,11 @@ abstract class FireAuthOperations {
         authPhone(selectedCountry, phoneNumber, null);
     }
 
+    private String mPhoneNumber;
+
     protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, PhoneAuthProvider.ForceResendingToken resendingToken) {
         try {
-            phoneNumber = selectedCountry.toCountryCode(phoneNumber);
+            mPhoneNumber = selectedCountry.toCountryCode(phoneNumber);
             PhoneAuthProvider.getInstance().verifyPhoneNumber(
                     phoneNumber,        // Phone number to verify
                     60,                 // Timeout duration
@@ -48,7 +50,7 @@ abstract class FireAuthOperations {
                     new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                         @Override
                         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-                            completed(phoneAuthCredential);
+                            completed(phoneAuthCredential, mPhoneNumber);
 
                         }
 
@@ -85,7 +87,7 @@ abstract class FireAuthOperations {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            completed(credential);
+                            completed(credential, mPhoneNumber);
                         } else {
                             verificationFailure(task.getException());
 
@@ -101,6 +103,6 @@ abstract class FireAuthOperations {
 
     protected abstract void verificationFailure(Exception e);
 
-    protected abstract void completed(PhoneAuthCredential phoneAuthCredential);
+    protected abstract void completed(PhoneAuthCredential phoneAuthCredential, String phoneNumber);
 
 }

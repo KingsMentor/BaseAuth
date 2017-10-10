@@ -124,7 +124,6 @@
     <orderEntry type="library" name="animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="support-fragment-26.1.0" level="project" />
     <orderEntry type="library" name="runtime-1.0.0" level="project" />
-    <orderEntry type="library" name="baseauth-1.0.1" level="project" />
     <orderEntry type="library" name="common-1.0.0" level="project" />
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
@@ -132,5 +131,6 @@
     <orderEntry type="library" name="design-26.1.0" level="project" />
     <orderEntry type="library" name="firebase-common-11.4.2" level="project" />
     <orderEntry type="library" name="play-services-tasks-11.4.2" level="project" />
+    <orderEntry type="module" module-name="baseauth" />
   </component>
 </module>

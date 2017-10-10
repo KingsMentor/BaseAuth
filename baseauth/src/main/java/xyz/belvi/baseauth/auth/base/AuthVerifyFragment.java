@@ -187,7 +187,7 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
 
     private void manualAuth() {
         ViewGroup viewGroup = (LinearLayout) rootView.findViewById(R.id.code_layout_grp);
-        if (getCode(viewGroup).length() == 6) {
+        if (getCode(viewGroup).length() == getArguments().getInt(CODE_SIZE)) {
             getAuthActivity().manualAuth(getCode(viewGroup));
         }
     }
@@ -230,7 +230,12 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
 
 
     private void initResend() {
-        String dec = "<a href=''><b>Resend Code<b></a>";
+        String dec = "";
+        if (getAuthActivity().getAuthMode().isCallSupported()) {
+            dec = "<a href='code'><b>Resend Code<b></a> &nbsp;&nbsp;<b>.</b>&nbsp;&nbsp; <a href='call'><b>Call Me<b> . </a>";
+        } else {
+            dec = "<a href='code'><b>Resend Code<b></a>";
+        }
         CharSequence sequence = Html.fromHtml(dec);
         waitField.setText(sequence);
         stripUnderlines(waitField, true);
@@ -248,9 +253,14 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
                 @Override
                 public void onClick(String url) {
                     if (shouldClick) {
+
                         waitField.setText("Please wait.");
-                        getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
                         statusField.setVisibility(View.GONE);
+                        if (url.equalsIgnoreCase("call")) {
+
+                            getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
+                        } else {
+                        }
 //                        authPhone();
                     }
                 }

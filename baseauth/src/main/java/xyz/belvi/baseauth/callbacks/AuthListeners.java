@@ -10,6 +10,7 @@ import android.content.Context;
 
 public interface AuthListeners {
 
+
     void authIgnored();
 
     void helpClicked(Context activity);

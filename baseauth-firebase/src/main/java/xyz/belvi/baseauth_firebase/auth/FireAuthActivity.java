@@ -11,6 +11,7 @@ import com.belvi.validator.PhoneNumberValidator;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import xyz.belvi.baseauth.auth.base.AUTH_MODE;
 import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth_firebase.callbacks.FirebaseAuthListener;
@@ -23,15 +24,15 @@ public class FireAuthActivity extends OpenAuthActivity {
 
     private FireAuthOperations fireAuthOperations;
     private PhoneAuthProvider.ForceResendingToken mForceResendingToken;
-    PhoneNumberValidator.Country selectedCountry;
-    private String mVerificationId, phone;
+    private String mVerificationId;
     private AuthListeners.AuthResults authResults;
 
     public static void startFirebasePhoneAuth(Context context, FirebaseAuthListener authListener, @StyleRes int styleRes) {
         AuthHandler.init(authListener);
         context.startActivity(new Intent(context, FireAuthActivity.class)
                 .putExtra(STYLE_KEY, styleRes)
-                .putExtra(CODE_LENGTH, FirebaseAuthListener.FIREBASE_CODE_LENGTH)
+                .putExtra(CODE_LENGTH, FirebaseAuthListener.AUTH_CODE_LENGTH)
+                .putExtra(AUTH_MODE_KEY, AUTH_MODE.FIRE_BASE)
         );
     }
 
@@ -53,13 +54,9 @@ public class FireAuthActivity extends OpenAuthActivity {
                 authResults.verificationFailure(e);
             }
 
-            protected void completed(PhoneAuthCredential phoneAuthCredential) {
-
-                try {
-                    AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, selectedCountry.toCountryCode(phone));
-                } catch (PhoneFormatException e) {
-                    e.printStackTrace();
-                }
+            protected void completed(PhoneAuthCredential phoneAuthCredential, String phoneNUmber) {
+                finish();
+                AuthHandler.getsAuthListener().onAuthCompleted(phoneAuthCredential, phoneNUmber);
 
             }
         };
@@ -96,8 +93,6 @@ public class FireAuthActivity extends OpenAuthActivity {
 
     @Override
     protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken) {
-        this.selectedCountry = selectedCountry;
-        this.phone = phoneNumber;
         if (forceResendingToken) {
             fireAuthOperations.authPhone(selectedCountry, phoneNumber, mForceResendingToken);
         } else {

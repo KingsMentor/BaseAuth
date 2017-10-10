@@ -13,6 +13,7 @@ import xyz.belvi.baseauth.callbacks.AuthListeners;
 public class OpenAuthActivity extends AuthActivity {
 
     public static final String CODE_LENGTH = " xyz.belvi.baseauth.auth.base.CODE_LENGTH";
+    public static final String API_KEY = " xyz.belvi.baseauth.auth.base.API_KEY";
 
     protected void handleHelp(Context context) {
 

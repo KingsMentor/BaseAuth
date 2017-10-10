@@ -26,6 +26,7 @@ abstract class AuthActivity extends AppCompatActivity {
 
 
     protected static final String STYLE_KEY = " xyz.belvi.baseauth.auth.base.STYLE_KEY";
+    protected static final String AUTH_MODE_KEY = " xyz.belvi.baseauth.auth.base.AUTH_MODE_KEY";
     private boolean showHelp;
 
 
@@ -61,6 +62,10 @@ abstract class AuthActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    protected AUTH_MODE getAuthMode() {
+        return AUTH_MODE.valueOf(getIntent().getStringExtra(AUTH_MODE_KEY));
+    }
 
     protected abstract void handleHelp(Context context);
 

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/baseauth-core/baseauth-core.iml" filepath="$PROJECT_DIR$/baseauth-core/baseauth-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseauth-firebase/baseauth-firebase.iml" filepath="$PROJECT_DIR$/baseauth-firebase/baseauth-firebase.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseauth-sinch/baseauth-sinch.iml" filepath="$PROJECT_DIR$/baseauth-sinch/baseauth-sinch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sinch-android-verification-1.4.1/sinch-android-verification-1.4.1.iml" filepath="$PROJECT_DIR$/sinch-android-verification-1.4.1/sinch-android-verification-1.4.1.iml" />
     </modules>
   </component>
 </project>

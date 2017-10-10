@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/baseauth-core" />
             <option value="$PROJECT_DIR$/baseauth-firebase" />
             <option value="$PROJECT_DIR$/baseauth-sinch" />
+            <option value="$PROJECT_DIR$/sinch-android-verification-1.4.1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
