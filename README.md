@@ -1,5 +1,5 @@
 # BaseAuth
-Easily set up phone authentication leveraging on different auth platforms (like firebase, sinch and many more to be added) of your choice. With a simple User Interface that can be styled to blend with the theme of your app, you can focus more on other functional requirement of the app other than the authetication process
+Easily set up phone authentication leveraging on different auth platforms (like firebase, sinch and many more to be added) of your choice. With a simple User Interface that can be styled to blend with the theme of your app, you can focus more on other functional requirement of the app other than the authentication process
 
  [ ![base-fireauth](https://api.bintray.com/packages/kingsmentor/maven/BaseAuth/images/download.svg) ](https://bintray.com/kingsmentor/maven/BaseAuth/_latestVersion)
 
