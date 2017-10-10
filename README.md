@@ -1,7 +1,11 @@
 # BaseAuth
-Phone number authentication leveraging on different phone number authentication platform like firebase, sinch e.t.c
+Easily set up phone authentication leveraging on different auth platform (firebase, sinch) of your choice. With a simple User Interface that can be styled to blend with the theme of your app, you can focus more on other functional requirement of the app other than the authetication process.
+
  [ ![base-fireauth](https://api.bintray.com/packages/kingsmentor/maven/BaseAuth/images/download.svg) ](https://bintray.com/kingsmentor/maven/BaseAuth/_latestVersion)
- 
+
+### Current Support
+compile 'com.belvi.auth:baseauth-firebase:1.0.2'
+
 ## Sample
 
 <img src="https://github.com/KingsMentor/BaseAuth/blob/master/sample/base_auth_sample.gif"  width="200" height="400" />
