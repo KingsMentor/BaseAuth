@@ -4,7 +4,8 @@ Easily set up phone authentication leveraging on different auth platforms (like 
  [ ![base-fireauth](https://api.bintray.com/packages/kingsmentor/maven/BaseAuth/images/download.svg) ](https://bintray.com/kingsmentor/maven/BaseAuth/_latestVersion)
 
 ### Current Support
-compile 'com.belvi.auth:baseauth-firebase:1.0.2'
+compile 'com.belvi.auth:baseauth-firebase:1.0.3'
+compile 'com.belvi.auth:baseauth-sinch:1.0.3'
 
 ## Sample
 
@@ -65,7 +66,24 @@ dependencies {
             }
         }, R.style.BaseAuthStyle);
 ```
+#### As Sinch :
 
+```java
+SinchAuthActivity.startSinchAuth(this, new SinchAuthListener() {
+            public void onAuthCompleted(String phoneNumber) {
+
+            }
+
+            public void authIgnored() {
+
+            }
+
+            public void helpClicked(Context activity) {
+
+            }
+        }, "API_KEY", R.style.BaseAuthStyle);
+ ```
+ 
 #### Styling and Theming 
 
 define style in styles.xml
@@ -142,6 +160,7 @@ you can override any of the resource to suit your need.
     <dimen name="next_btn_txt_size">14sp</dimen>
     <dimen name="next_btn_padding">16dp</dimen>
     <dimen name="wait_field_txt_size">16sp</dimen>
+    <dimen name="wait_field_top_margin">8dp</dimen>
     <dimen name="receive_code_confirmation">14sp</dimen>
     <dimen name="receive_code_confirmation_top_margin">16dp</dimen>
     <dimen name="verification_status_text_size">12sp</dimen>
