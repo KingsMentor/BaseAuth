@@ -40,7 +40,7 @@ abstract class SinchAuthOperations {
 
     private Verification mVerification;
 
-    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber) {
+    protected void authPhoneViaSMS(PhoneNumberValidator.Country selectedCountry, String phoneNumber) {
         Config config = SinchVerification.config().applicationKey(getApplicationKey()).context(getActivity()).build();
         try {
             final String phoneNumberInE164 = selectedCountry.toCountryCode(phoneNumber);
@@ -62,7 +62,37 @@ abstract class SinchAuthOperations {
                     verificationFailure(e);
                 }
             });
-//            mVerification.initiate();
+            mVerification.initiate();
+        } catch (PhoneFormatException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    protected void authPhoneViaCall(PhoneNumberValidator.Country selectedCountry, String phoneNumber) {
+        Config config = SinchVerification.config().applicationKey(getApplicationKey()).context(getActivity()).build();
+        try {
+            final String phoneNumberInE164 = selectedCountry.toCountryCode(phoneNumber);
+            mVerification = SinchVerification.createFlashCallVerification(config, phoneNumberInE164, new VerificationListener() {
+                public void onInitiated(InitiationResult initiationResult) {
+                    verificationInitiated();
+                }
+
+                public void onInitiationFailed(Exception e) {
+                    timeOut();
+                    verificationFailure(e);
+                }
+
+                public void onVerified() {
+                    completed(phoneNumberInE164);
+                }
+
+                public void onVerificationFailed(Exception e) {
+                    verificationFailure(e);
+                }
+            });
+            mVerification.initiate();
         } catch (PhoneFormatException e) {
             e.printStackTrace();
         }

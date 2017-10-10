@@ -73,6 +73,7 @@
                 android:id="@+id/wait_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/wait_field_top_padding"
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/wait_field"

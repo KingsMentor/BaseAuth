@@ -14,6 +14,7 @@
     <dimen name="next_btn_txt_size">14sp</dimen>
     <dimen name="next_btn_padding">16dp</dimen>
     <dimen name="wait_field_txt_size">16sp</dimen>
+    <dimen name="wait_field_top_padding">4dp</dimen>
     <dimen name="receive_code_confirmation">14sp</dimen>
     <dimen name="receive_code_confirmation_top_margin">16dp</dimen>
     <dimen name="verification_status_text_size">12sp</dimen>

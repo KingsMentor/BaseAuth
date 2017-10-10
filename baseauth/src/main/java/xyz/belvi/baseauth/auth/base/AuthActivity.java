@@ -73,7 +73,7 @@ abstract class AuthActivity extends AppCompatActivity {
 
     protected abstract void manualAuth(String code);
 
-    protected abstract void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken);
+    protected abstract void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken, boolean callAuth);
 
 
 }

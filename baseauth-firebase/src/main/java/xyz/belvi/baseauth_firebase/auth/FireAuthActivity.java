@@ -1,15 +1,23 @@
 package xyz.belvi.baseauth_firebase.auth;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
+import android.support.v4.app.ActivityCompat;
 
 import com.belvi.validator.PhoneFormatException;
 import com.belvi.validator.PhoneNumberValidator;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.single.PermissionListener;
 
 import xyz.belvi.baseauth.auth.base.AUTH_MODE;
 import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
@@ -92,12 +100,15 @@ public class FireAuthActivity extends OpenAuthActivity {
     }
 
     @Override
-    protected void authPhone(PhoneNumberValidator.Country selectedCountry, String phoneNumber, boolean forceResendingToken) {
-        if (forceResendingToken) {
+    protected void authPhone(final PhoneNumberValidator.Country selectedCountry, final String phoneNumber, final boolean resendingToken, boolean isCallAuth) {
+        if (resendingToken) {
             fireAuthOperations.authPhone(selectedCountry, phoneNumber, mForceResendingToken);
         } else {
             fireAuthOperations.authPhone(selectedCountry, phoneNumber);
         }
+
+
     }
+
 
 }

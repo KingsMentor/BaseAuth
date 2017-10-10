@@ -18,7 +18,7 @@ public class URLSpanNoUnderline extends URLSpan {
     @Override
     public void onClick(View widget) {
         super.onClick(widget);
-        mListener.onClick("");
+        mListener.onClick(getURL());
     }
 
     @Override

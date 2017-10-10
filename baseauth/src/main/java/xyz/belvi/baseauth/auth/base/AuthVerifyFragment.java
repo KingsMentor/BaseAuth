@@ -40,6 +40,8 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
     private final String COUNTRY_KEY = "COUNTRY_KEY";
     private final String CODE_SIZE = "CODE_SIZE";
 
+    private String CALL_URL = "Call", PHONE_URL = "Phone";
+
 
     int secCounter;
     Runnable runnable;
@@ -75,7 +77,7 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
         String phone = getArguments().getString(PHONE_KEY);
         try {
             ((AppCompatTextView) rootView.findViewById(R.id.phone_instruction)).setText(String.format(getString(R.string.type_in), country.toCountryCode(phone)));
-            getAuthActivity().authPhone(country, phone, false);
+            getAuthActivity().authPhone(country, phone, false, false);
         } catch (PhoneFormatException e) {
             e.printStackTrace();
         }
@@ -232,9 +234,9 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
     private void initResend() {
         String dec = "";
         if (getAuthActivity().getAuthMode().isCallSupported()) {
-            dec = "<a href='code'><b>Resend Code<b></a> &nbsp;&nbsp;<b>.</b>&nbsp;&nbsp; <a href='call'><b>Call Me<b> . </a>";
+            dec = "<a href='" + PHONE_URL + "'><b>Resend Code<b></a> &nbsp;&nbsp;\u2024&nbsp;&nbsp; <a href='" + CALL_URL + "'><b>Call Me<b> </a>";
         } else {
-            dec = "<a href='code'><b>Resend Code<b></a>";
+            dec = "<a href='" + PHONE_URL + "'><b>Resend Code<b></a>";
         }
         CharSequence sequence = Html.fromHtml(dec);
         waitField.setText(sequence);
@@ -249,17 +251,18 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
             int start = s.getSpanStart(span);
             int end = s.getSpanEnd(span);
             s.removeSpan(span);
-            span = new URLSpanNoUnderline("", new URLSpanNoUnderline.OnClickListener() {
+            span = new URLSpanNoUnderline(span.getURL(), new URLSpanNoUnderline.OnClickListener() {
                 @Override
                 public void onClick(String url) {
                     if (shouldClick) {
 
                         waitField.setText("Please wait.");
                         statusField.setVisibility(View.GONE);
-                        if (url.equalsIgnoreCase("call")) {
-
-                            getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true);
+                        if (url.equalsIgnoreCase(CALL_URL)) {
+                            getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true, true);
                         } else {
+                            getAuthActivity().authPhone(PhoneNumberValidator.Country.valueOf(getArguments().getString(COUNTRY_KEY)), getArguments().getString(PHONE_KEY), true, false);
+
                         }
 //                        authPhone();
                     }

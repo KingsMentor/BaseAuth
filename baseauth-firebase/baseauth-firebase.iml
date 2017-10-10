@@ -86,6 +86,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/intermediate-jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
@@ -128,8 +129,10 @@
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="play-services-basement-license-11.4.2" level="project" />
+    <orderEntry type="library" name="rxpermissions-0.9.4" level="project" />
     <orderEntry type="library" name="design-26.1.0" level="project" />
     <orderEntry type="library" name="firebase-common-11.4.2" level="project" />
+    <orderEntry type="library" name="dexter-4.1.0" level="project" />
     <orderEntry type="library" name="play-services-tasks-11.4.2" level="project" />
     <orderEntry type="module" module-name="baseauth" />
   </component>

@@ -5,6 +5,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "xyz.belvi.baseauthsample"
         minSdkVersion 16
@@ -28,8 +34,8 @@ repositories {
 dependencies {
     compile 'com.google.firebase:firebase-auth:11.4.2'
 //    compile 'com.belvi.auth:baseauth-firebase:1.0.2'
-//    compile project(':baseauth-firebase')
-    compile project(':baseauth-sinch')
+    compile project(':baseauth-firebase')
+//    compile project(':baseauth-sinch')
 }
 
 
