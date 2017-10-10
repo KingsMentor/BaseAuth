@@ -33,7 +33,7 @@ dependencies {
 
 #### Sinch
 
-This module handles phone number authentication using firebase. 
+This module handles phone number authentication using sinch. 
 
 *Not Available in 1.0.1*
 
