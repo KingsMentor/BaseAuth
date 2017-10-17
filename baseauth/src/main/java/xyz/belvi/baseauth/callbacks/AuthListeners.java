@@ -16,11 +16,11 @@ public interface AuthListeners {
     void helpClicked(Context activity);
 
     interface AuthResults {
-        abstract void codeSent();
+        void codeSent();
 
-        abstract void timeOut();
+        void timeOut();
 
-        abstract void verificationFailure(Exception e);
+        void verificationFailure(Exception e);
     }
 
 

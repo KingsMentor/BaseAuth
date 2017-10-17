@@ -51,6 +51,7 @@ public class SinchAuthActivity extends OpenAuthActivity {
         sinchAuthOperations = new SinchAuthOperations(this, getIntent().getStringExtra(API_KEY)) {
 
             protected void verificationInitiated() {
+                authResults.codeSent();
                 mVerificationInitiated = true;
             }
 

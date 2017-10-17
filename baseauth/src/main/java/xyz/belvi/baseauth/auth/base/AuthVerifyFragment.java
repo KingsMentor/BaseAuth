@@ -234,7 +234,7 @@ public class AuthVerifyFragment extends Fragment implements AuthListeners.AuthRe
     private void initResend() {
         String dec = "";
         if (getAuthActivity().getAuthMode().isCallSupported()) {
-            dec = "<a href='" + PHONE_URL + "'><b>Resend Code<b></a> &nbsp;&nbsp;\u2024&nbsp;&nbsp; <a href='" + CALL_URL + "'><b>Call Me<b> </a>";
+            dec = "<a href='" + PHONE_URL + "'><b>Resend Code<b></a> &nbsp;&nbsp;\u2E33&nbsp;&nbsp; <a href='" + CALL_URL + "'><b>Call Me<b> </a>";
         } else {
             dec = "<a href='" + PHONE_URL + "'><b>Resend Code<b></a>";
         }

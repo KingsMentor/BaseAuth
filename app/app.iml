@@ -118,17 +118,19 @@
     <orderEntry type="library" name="firebase-iid-11.4.2" level="project" />
     <orderEntry type="library" name="recyclerview-v7-26.1.0" level="project" />
     <orderEntry type="library" name="support-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="verify-4.0.0" level="project" />
     <orderEntry type="library" name="support-core-utils-26.1.0" level="project" />
     <orderEntry type="library" name="firebase-auth-license-11.4.2" level="project" />
     <orderEntry type="library" name="play-services-base-license-11.4.2" level="project" />
     <orderEntry type="library" name="firebase-common-license-11.4.2" level="project" />
     <orderEntry type="library" name="play-services-basement-11.4.2" level="project" />
     <orderEntry type="library" name="firebase-auth-11.4.2" level="project" />
-    <orderEntry type="library" name="phonenumbervalidator-1.0.0" level="project" />
     <orderEntry type="library" name="transition-26.1.0" level="project" />
+    <orderEntry type="library" name="phonenumbervalidator-1.0.2" level="project" />
     <orderEntry type="library" name="firebase-analytics-impl-license-11.4.2" level="project" />
     <orderEntry type="library" scope="TEST" name="multidex-instrumentation-1.0.2" level="project" />
     <orderEntry type="library" name="firebase-iid-license-11.4.2" level="project" />
+    <orderEntry type="library" name="gson-2.4" level="project" />
     <orderEntry type="library" name="support-compat-26.1.0" level="project" />
     <orderEntry type="library" name="support-annotations-26.1.0" level="project" />
     <orderEntry type="library" name="support-v4-26.1.0" level="project" />
@@ -139,8 +141,11 @@
     <orderEntry type="library" name="common-1.0.0" level="project" />
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="multidex-1.0.1" level="project" />
+    <orderEntry type="library" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" name="firebase-analytics-impl-11.4.2" level="project" />
     <orderEntry type="library" name="firebase-analytics-11.4.2" level="project" />
+    <orderEntry type="library" name="junit-4.12" level="project" />
     <orderEntry type="library" name="play-services-basement-license-11.4.2" level="project" />
     <orderEntry type="library" name="rxpermissions-0.9.4" level="project" />
     <orderEntry type="library" name="design-26.1.0" level="project" />
@@ -148,7 +153,7 @@
     <orderEntry type="library" name="firebase-common-11.4.2" level="project" />
     <orderEntry type="library" name="dexter-4.1.0" level="project" />
     <orderEntry type="library" name="play-services-tasks-11.4.2" level="project" />
+    <orderEntry type="module" module-name="baseauth-nexmo" />
     <orderEntry type="module" module-name="baseauth" />
-    <orderEntry type="module" module-name="baseauth-firebase" />
   </component>
 </module>

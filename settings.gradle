@@ -1,1 +1,1 @@
-include ':app', ':baseauth', ':baseauth-firebase', ':baseauth-sinch', ':baseauth-core', ':sinch-android-verification-1.4.1'
+include ':app', ':baseauth', ':baseauth-firebase', ':baseauth-sinch', ':baseauth-core', ':sinch-android-verification-1.4.1', ':baseauth-nexmo'

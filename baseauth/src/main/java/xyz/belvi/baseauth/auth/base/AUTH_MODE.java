@@ -6,6 +6,7 @@ package xyz.belvi.baseauth.auth.base;
 
 public enum AUTH_MODE {
     FIRE_BASE(false),
+    NEXMO(false),
     SINCH(true),
     CORE(true);
 

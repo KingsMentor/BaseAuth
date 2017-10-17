@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="verify-4.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/verify-4.0.0.aar/c80fe63091a13b2fdcf384aebacfaafd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/verify-4.0.0.aar/c80fe63091a13b2fdcf384aebacfaafd/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/verify-4.0.0.aar/c80fe63091a13b2fdcf384aebacfaafd/jars/libs/org.apache.http.legacy.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nexmo/verify/4.0.0/cc053409292bf00b91d97b2fa2cd9297a47d15bd/verify-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

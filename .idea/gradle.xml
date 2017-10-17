@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/baseauth" />
             <option value="$PROJECT_DIR$/baseauth-core" />
             <option value="$PROJECT_DIR$/baseauth-firebase" />
+            <option value="$PROJECT_DIR$/baseauth-nexmo" />
             <option value="$PROJECT_DIR$/baseauth-sinch" />
             <option value="$PROJECT_DIR$/sinch-android-verification-1.4.1" />
           </set>

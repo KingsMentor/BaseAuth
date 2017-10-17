@@ -34,14 +34,14 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
-    compile 'com.belvi.validator:phonenumbervalidator:1.0.0'
+    compile 'xyz.belvi.validator:phonenumbervalidator:1.0.2'
 }
 
 //ext {
 //    bintrayRepo = 'maven'
 //    bintrayName = 'BaseAuth'
 //
-//    publishedGroupId = 'com.belvi.auth'
+//    publishedGroupId = 'xyz.belvi.auth'
 //    libraryName = 'baseauth'
 //    artifact = 'baseauth'
 //
@@ -50,7 +50,7 @@ dependencies {
 //    siteUrl = 'https://github.com/KingsMentor/BaseAuth'
 //    gitUrl = 'https://github.com/KingsMentor/BaseAuth.git'
 //
-//    libraryVersion = '1.0.1'
+//    libraryVersion = '1.0.4'
 //
 //    developerId = 'kingsmentor'
 //    developerName = 'Nosakhare Belvi'
