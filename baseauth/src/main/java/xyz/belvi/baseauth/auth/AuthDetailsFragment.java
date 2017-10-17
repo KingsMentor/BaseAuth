@@ -21,9 +21,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneModel;
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneModel;
+import xyz.belvi.validator.PhoneNumberValidator;
 
 import xyz.belvi.baseauth.auth.base.OpenAuthActivity;
 import xyz.belvi.baseauth.callbacks.AuthListeners;

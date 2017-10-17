@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void helpClicked(Context activity) {
 
             }
-        }, new NexmoAuth("YOUR_ID", "YOUR_SECRET", 4), R.style.BaseAuthStyle);
+        }, new NexmoAuth("c6420544-b332-49ad-b0b7-ae0a83b3a5eb", "bb6f15d3526f7d5", 4), R.style.BaseAuthStyle);
     }
 
 //    private void testFireBase() {

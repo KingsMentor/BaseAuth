@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="phonenumbervalidator-1.0.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/phonenumbervalidator-1.0.4.aar/81366452093f5896bbc37de4169a64ec/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/phonenumbervalidator-1.0.4.aar/81366452093f5896bbc37de4169a64ec/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xyz.belvi.validator/phonenumbervalidator/1.0.4/545b582cb91c86436300727148a3d75ce5757c70/phonenumbervalidator-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

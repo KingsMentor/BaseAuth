@@ -107,11 +107,11 @@
     <orderEntry type="library" name="common-1.0.0" level="project" />
     <orderEntry type="library" name="1_common-1.0.0" level="project" />
     <orderEntry type="library" name="appcompat-v7-26.1.0" level="project" />
-    <orderEntry type="library" name="baseauth-1.0.4" level="project" />
     <orderEntry type="library" name="rxpermissions-0.9.4" level="project" />
     <orderEntry type="library" name="design-26.1.0" level="project" />
     <orderEntry type="library" name="transition-26.1.0" level="project" />
-    <orderEntry type="library" name="phonenumbervalidator-1.0.2" level="project" />
     <orderEntry type="library" name="dexter-4.1.0" level="project" />
+    <orderEntry type="library" name="phonenumbervalidator-1.0.4" level="project" />
+    <orderEntry type="module" module-name="baseauth" />
   </component>
 </module>

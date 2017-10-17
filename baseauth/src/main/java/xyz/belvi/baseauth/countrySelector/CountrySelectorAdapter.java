@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneNumberValidator;
 
 import xyz.belvi.baseauth.R;
 

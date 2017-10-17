@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneNumberValidator;
 
 import xyz.belvi.baseauth.auth.AuthDetailsFragment;
 import xyz.belvi.baseauth.callbacks.AuthListeners;

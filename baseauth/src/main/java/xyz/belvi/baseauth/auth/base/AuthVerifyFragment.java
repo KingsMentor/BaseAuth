@@ -22,9 +22,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneNumberValidator;
-
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneNumberValidator;
 import xyz.belvi.baseauth.R;
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 import xyz.belvi.baseauth.custom.URLSpanNoUnderline;

@@ -8,8 +8,8 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
 import android.support.v4.app.ActivityCompat;
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneNumberValidator;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.karumi.dexter.Dexter;

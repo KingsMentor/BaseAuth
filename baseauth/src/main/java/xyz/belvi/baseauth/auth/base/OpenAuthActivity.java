@@ -2,7 +2,7 @@ package xyz.belvi.baseauth.auth.base;
 
 import android.content.Context;
 
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneNumberValidator;
 
 import xyz.belvi.baseauth.callbacks.AuthListeners;
 

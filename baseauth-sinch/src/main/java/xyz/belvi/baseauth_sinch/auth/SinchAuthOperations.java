@@ -3,8 +3,8 @@ package xyz.belvi.baseauth_sinch.auth;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneNumberValidator;
 import com.sinch.verification.Config;
 import com.sinch.verification.InitiationResult;
 import com.sinch.verification.PhoneNumberUtils;

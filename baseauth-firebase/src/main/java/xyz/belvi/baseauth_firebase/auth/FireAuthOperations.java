@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneNumberValidator;
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneNumberValidator;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;

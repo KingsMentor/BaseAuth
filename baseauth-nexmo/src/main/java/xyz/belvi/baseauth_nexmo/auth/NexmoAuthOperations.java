@@ -2,8 +2,6 @@ package xyz.belvi.baseauth_nexmo.auth;
 
 import android.app.Activity;
 
-import com.belvi.validator.PhoneFormatException;
-import com.belvi.validator.PhoneNumberValidator;
 import com.nexmo.sdk.NexmoClient;
 import com.nexmo.sdk.core.client.ClientBuilderException;
 import com.nexmo.sdk.verify.client.VerifyClient;
@@ -14,6 +12,9 @@ import com.nexmo.sdk.verify.event.VerifyClientListener;
 import com.nexmo.sdk.verify.event.VerifyError;
 
 import java.io.IOException;
+
+import xyz.belvi.validator.PhoneFormatException;
+import xyz.belvi.validator.PhoneNumberValidator;
 
 
 /**
@@ -74,21 +75,21 @@ abstract class NexmoAuthOperations {
                     verificationFailure(exception);
                 }
             });
-            mVerifyClient.getUserStatus("", ccNumber, new SearchListener() {
+            mVerifyClient.getUserStatus(selectedCountry.getIso(), ccNumber, new SearchListener() {
                 public void onUserStatus(UserStatus userStatus) {
                     if (userStatus != UserStatus.USER_VERIFIED) {
-                        mVerifyClient.getVerifiedUser("", ccNumber);
+                        mVerifyClient.getVerifiedUser(selectedCountry.getIso(), ccNumber);
                     } else {
                         completed(ccNumber);
                     }
                 }
 
                 public void onError(VerifyError errorCode, String errorMessage) {
-
+                    verificationFailure(new Exception(errorCode.name()));
                 }
 
                 public void onException(IOException exception) {
-
+                    verificationFailure(exception);
                 }
             });
         } catch (ClientBuilderException e) {
