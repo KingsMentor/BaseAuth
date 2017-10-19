@@ -6,9 +6,9 @@ Easily set up phone authentication leveraging on different auth platforms (like 
 ### Current Support
 
 ```gradle
-compile 'com.belvi.auth:baseauth-firebase:1.0.5'
-compile 'com.belvi.auth:baseauth-sinch:1.0.5'
-compile 'com.belvi.auth:baseauth-nexmo:1.0.5'
+compile 'xyz.belvi.auth:baseauth-firebase:1.0.5'
+compile 'xyz.belvi.auth:baseauth-sinch:1.0.5'
+compile 'xyz.belvi.auth:baseauth-nexmo:1.0.5'
 ```
 
 ## Sample
@@ -35,7 +35,7 @@ allprojects {
 core provides access to other underlying auth platform. Only use core if you intend to perform phone number authetication using multiple auth providers.
 ```gradle
 dependencies {
-    compile 'com.belvi.auth:baseauth-core:1.0.3'
+    compile 'xyz.belvi.auth:baseauth-core:1.0.3'
 }
 ```
 
@@ -44,7 +44,7 @@ dependencies {
 This module handles phone number authentication using firebase. 
 ```gradle
 dependencies {
-    compile 'com.belvi.auth:baseauth-firebase:1.0.5'
+    compile 'xyz.belvi.auth:baseauth-firebase:1.0.5'
 }
 ```
 
@@ -55,7 +55,7 @@ This module handles phone number authentication using sinch.
 
 ```gradle
 dependencies {
-    compile 'com.belvi.auth:baseauth-sinch:1.0.5'
+    compile 'xyz.belvi.auth:baseauth-sinch:1.0.5'
 }
 ```
 ## Using the Library:
