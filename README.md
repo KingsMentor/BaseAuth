@@ -6,8 +6,9 @@ Easily set up phone authentication leveraging on different auth platforms (like 
 ### Current Support
 
 ```gradle
-compile 'com.belvi.auth:baseauth-firebase:1.0.3'
-compile 'com.belvi.auth:baseauth-sinch:1.0.3'
+compile 'com.belvi.auth:baseauth-firebase:1.0.5'
+compile 'com.belvi.auth:baseauth-sinch:1.0.5'
+compile 'com.belvi.auth:baseauth-nexmo:1.0.5'
 ```
 
 ## Sample
@@ -16,8 +17,20 @@ compile 'com.belvi.auth:baseauth-sinch:1.0.3'
 
 ## Adding as a dependency
 
+add `jcenter({url "http://dl.bintray.com/kingsmentor/maven"})` to your project / root build.gradle like so:
+
+```gradle
+...
+allprojects {
+    repositories {
+        jcenter({url "http://dl.bintray.com/kingsmentor/maven"})
+    }
+}
+...
+```
+
 #### Core
-*Not Available in 1.0.1*
+*Not Available in 1.0.5*
 
 core provides access to other underlying auth platform. Only use core if you intend to perform phone number authetication using multiple auth providers.
 ```gradle
@@ -31,7 +44,7 @@ dependencies {
 This module handles phone number authentication using firebase. 
 ```gradle
 dependencies {
-    compile 'com.belvi.auth:baseauth-firebase:1.0.3'
+    compile 'com.belvi.auth:baseauth-firebase:1.0.5'
 }
 ```
 
@@ -39,11 +52,10 @@ dependencies {
 
 This module handles phone number authentication using sinch. 
 
-*Not Available in 1.0.1*
 
 ```gradle
 dependencies {
-    compile 'com.belvi.auth:baseauth-sinch:1.0.3'
+    compile 'com.belvi.auth:baseauth-sinch:1.0.5'
 }
 ```
 ## Using the Library:
@@ -87,6 +99,24 @@ SinchAuthActivity.startSinchAuth(this, new SinchAuthListener() {
         }, "API_KEY", R.style.BaseAuthStyle);
  ```
  
+ #### As Nemo :
+ 
+ ```java
+         NexmoAuthActivity.startNexmoAuth(this, new NexmoAuthListener() {
+            public void onAuthCompleted(String phoneNumber) {
+                Toast.makeText(MainActivity.this, phoneNumber, Toast.LENGTH_LONG).show();
+            }
+
+            public void authIgnored() {
+
+            }
+
+            public void helpClicked(Context activity) {
+
+            }
+        }, new NexmoAuth("YOUR_API_ID", "YOUR_SHARED_SECRET", PIN_LENGTH), R.style.BaseAuthStyle);
+```
+
 #### Styling and Theming 
 
 define style in styles.xml
